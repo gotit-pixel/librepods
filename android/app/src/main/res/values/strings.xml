@@ -237,7 +237,6 @@
     <string name="quick_settings_tile_label">NimblePods controls</string>
     <string name="apple_disclaimer_title">Apple affiliation</string>
     <string name="apple_affiliation_disclaimer">NimblePods is an independent project and is not affiliated with Apple Inc.</string>
-    <string name="privacy_policy">Privacy policy</string>
     <string name="source_code">Source code</string>
     <string name="billing_product_unavailable">Purchases are temporarily unavailable. Please try again later.</string>
     <string name="billing_start_failed">Google Play could not start the purchase. Please try again.</string>
