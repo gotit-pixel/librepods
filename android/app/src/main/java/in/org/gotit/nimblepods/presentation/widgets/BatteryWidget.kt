@@ -18,12 +18,12 @@
 
 @file:OptIn(ExperimentalEncodingApi::class)
 
-package in.org.gotit.nimblepods.presentation.widgets
+package `in`.org.gotit.nimblepods.presentation.widgets
 
 import android.appwidget.AppWidgetManager
 import android.appwidget.AppWidgetProvider
 import android.content.Context
-import in.org.gotit.nimblepods.services.ServiceManager
+import `in`.org.gotit.nimblepods.services.ServiceManager
 import kotlin.io.encoding.ExperimentalEncodingApi
 
 class BatteryWidget : AppWidgetProvider() {

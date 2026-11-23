@@ -16,7 +16,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-package in.org.gotit.nimblepods.presentation.components
+package `in`.org.gotit.nimblepods.presentation.components
 
 import android.graphics.RuntimeShader
 import android.os.Build
@@ -66,9 +66,9 @@ import com.kyant.backdrop.effects.lens
 import com.kyant.backdrop.effects.vibrancy
 import com.kyant.backdrop.highlight.Highlight
 import kotlinx.coroutines.launch
-import in.org.gotit.nimblepods.presentation.theme.DesignSystem
-import in.org.gotit.nimblepods.presentation.theme.LocalDesignSystem
-import in.org.gotit.nimblepods.utils.inspectDragGestures
+import `in`.org.gotit.nimblepods.presentation.theme.DesignSystem
+import `in`.org.gotit.nimblepods.presentation.theme.LocalDesignSystem
+import `in`.org.gotit.nimblepods.utils.inspectDragGestures
 import kotlin.math.abs
 import kotlin.math.atan2
 import kotlin.math.cos

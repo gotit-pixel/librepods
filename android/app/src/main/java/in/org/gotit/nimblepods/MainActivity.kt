@@ -18,10 +18,10 @@
 
 @file:OptIn(ExperimentalEncodingApi::class)
 
-package in.org.gotit.nimblepods
+package `in`.org.gotit.nimblepods
 
-// import in.org.gotit.nimblepods.screens.Onboarding
-// import in.org.gotit.nimblepods.utils.RadareOffsetFinder
+// import `in`.org.gotit.nimblepods.screens.Onboarding
+// import `in`.org.gotit.nimblepods.utils.RadareOffsetFinder
 //import dagger.hilt.android.AndroidEntryPoint
 import android.annotation.SuppressLint
 import android.app.Activity
@@ -50,13 +50,13 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.google.accompanist.permissions.ExperimentalPermissionsApi
 import com.google.android.play.core.review.ReviewManagerFactory
 import dev.chrisbanes.haze.materials.ExperimentalHazeMaterialsApi
-import in.org.gotit.nimblepods.data.AirPodsNotifications
-import in.org.gotit.nimblepods.data.ControlCommandRepository
-import in.org.gotit.nimblepods.presentation.navigation.NavigationRoot
-import in.org.gotit.nimblepods.presentation.theme.NimblePodsTheme
-import in.org.gotit.nimblepods.presentation.viewmodel.AirPodsViewModel
-import in.org.gotit.nimblepods.services.AirPodsService
-import in.org.gotit.nimblepods.utils.XposedState
+import `in`.org.gotit.nimblepods.data.AirPodsNotifications
+import `in`.org.gotit.nimblepods.data.ControlCommandRepository
+import `in`.org.gotit.nimblepods.presentation.navigation.NavigationRoot
+import `in`.org.gotit.nimblepods.presentation.theme.NimblePodsTheme
+import `in`.org.gotit.nimblepods.presentation.viewmodel.AirPodsViewModel
+import `in`.org.gotit.nimblepods.services.AirPodsService
+import `in`.org.gotit.nimblepods.utils.XposedState
 import kotlin.io.encoding.ExperimentalEncodingApi
 
 lateinit var serviceConnection: ServiceConnection

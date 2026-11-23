@@ -16,10 +16,10 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-package in.org.gotit.nimblepods.billing
+package `in`.org.gotit.nimblepods.billing
 
 import android.content.Context
-import in.org.gotit.nimblepods.BuildConfig
+import `in`.org.gotit.nimblepods.BuildConfig
 
 object BillingProviderFactory {
 

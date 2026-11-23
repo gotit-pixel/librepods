@@ -18,11 +18,11 @@
 
 @file:OptIn(ExperimentalEncodingApi::class)
 
-package in.org.gotit.nimblepods.bluetooth
+package `in`.org.gotit.nimblepods.bluetooth
 
 import android.util.Log
-import in.org.gotit.nimblepods.data.Capability
-import in.org.gotit.nimblepods.data.CustomEq
+import `in`.org.gotit.nimblepods.data.Capability
+import `in`.org.gotit.nimblepods.data.CustomEq
 import java.nio.ByteBuffer
 import java.nio.ByteOrder
 import kotlin.io.encoding.ExperimentalEncodingApi

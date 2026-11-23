@@ -16,7 +16,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-package in.org.gotit.nimblepods.presentation.theme
+package `in`.org.gotit.nimblepods.presentation.theme
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -40,7 +40,7 @@ import androidx.compose.ui.tooling.preview.Devices.PIXEL_9_PRO_XL
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import in.org.gotit.nimblepods.R
+import `in`.org.gotit.nimblepods.R
 
 val SystemFontFamily = FontFamily.Default
 

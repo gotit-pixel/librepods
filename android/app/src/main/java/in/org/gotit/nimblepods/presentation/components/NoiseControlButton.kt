@@ -16,7 +16,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-package in.org.gotit.nimblepods.presentation.components
+package `in`.org.gotit.nimblepods.presentation.components
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
@@ -35,7 +35,7 @@ import androidx.compose.ui.graphics.ImageBitmap
 import androidx.compose.ui.res.imageResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import in.org.gotit.nimblepods.R
+import `in`.org.gotit.nimblepods.R
 
 @Composable
 fun NoiseControlButton(

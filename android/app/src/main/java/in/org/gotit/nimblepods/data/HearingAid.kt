@@ -16,7 +16,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-package in.org.gotit.nimblepods.data
+package `in`.org.gotit.nimblepods.data
 
 import android.util.Log
 import androidx.compose.runtime.MutableState
@@ -25,7 +25,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import in.org.gotit.nimblepods.bluetooth.ATTHandles
+import `in`.org.gotit.nimblepods.bluetooth.ATTHandles
 import java.io.IOException
 import java.nio.ByteBuffer
 import java.nio.ByteOrder

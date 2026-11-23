@@ -18,7 +18,7 @@
 
 @file:OptIn(ExperimentalEncodingApi::class)
 
-package in.org.gotit.nimblepods.presentation.components
+package `in`.org.gotit.nimblepods.presentation.components
 
 import android.annotation.SuppressLint
 import androidx.compose.animation.core.AnimationSpec
@@ -73,12 +73,12 @@ import androidx.compose.ui.unit.IntOffset
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.zIndex
-import in.org.gotit.nimblepods.R
-import in.org.gotit.nimblepods.data.NoiseControlMode
-import in.org.gotit.nimblepods.presentation.theme.DesignSystem
-import in.org.gotit.nimblepods.presentation.theme.NimblePodsTheme
-import in.org.gotit.nimblepods.presentation.theme.LocalDesignSystem
-import in.org.gotit.nimblepods.presentation.theme.sectionHeader
+import `in`.org.gotit.nimblepods.R
+import `in`.org.gotit.nimblepods.data.NoiseControlMode
+import `in`.org.gotit.nimblepods.presentation.theme.DesignSystem
+import `in`.org.gotit.nimblepods.presentation.theme.NimblePodsTheme
+import `in`.org.gotit.nimblepods.presentation.theme.LocalDesignSystem
+import `in`.org.gotit.nimblepods.presentation.theme.sectionHeader
 import kotlin.io.encoding.ExperimentalEncodingApi
 import kotlin.math.roundToInt
 

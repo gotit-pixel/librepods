@@ -1,4 +1,4 @@
-package in.org.gotit.nimblepods.presentation.screens
+package `in`.org.gotit.nimblepods.presentation.screens
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -10,7 +10,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import in.org.gotit.nimblepods.presentation.theme.NimblePodsTheme
+import `in`.org.gotit.nimblepods.presentation.theme.NimblePodsTheme
 
 @Composable
 fun LoadingScreen() {

@@ -18,7 +18,7 @@
 
 @file:OptIn(ExperimentalEncodingApi::class)
 
-package in.org.gotit.nimblepods.utils
+package `in`.org.gotit.nimblepods.utils
 
 import android.content.Context
 import android.util.Log
@@ -27,7 +27,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.withContext
-import in.org.gotit.nimblepods.services.ServiceManager
+import `in`.org.gotit.nimblepods.services.ServiceManager
 import java.io.BufferedReader
 import java.io.File
 import java.io.FileOutputStream

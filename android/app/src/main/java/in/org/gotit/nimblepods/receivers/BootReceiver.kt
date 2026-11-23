@@ -18,13 +18,13 @@
 
 @file:OptIn(ExperimentalEncodingApi::class)
 
-package in.org.gotit.nimblepods.receivers
+package `in`.org.gotit.nimblepods.receivers
 
 import android.content.BroadcastReceiver
 import android.content.Context
 import android.content.Intent
 import kotlin.io.encoding.ExperimentalEncodingApi
-import in.org.gotit.nimblepods.services.AirPodsService
+import `in`.org.gotit.nimblepods.services.AirPodsService
 
 class BootReceiver: BroadcastReceiver() {
     override fun onReceive(context: Context?, intent: Intent?) {

@@ -1,4 +1,4 @@
-package in.org.gotit.nimblepods.presentation.components
+package `in`.org.gotit.nimblepods.presentation.components
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -20,10 +20,10 @@ import androidx.compose.ui.tooling.preview.AndroidUiModes.UI_MODE_NIGHT_YES
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.Wallpapers.GREEN_DOMINATED_EXAMPLE
 import androidx.compose.ui.unit.dp
-import in.org.gotit.nimblepods.presentation.theme.DesignSystem
-import in.org.gotit.nimblepods.presentation.theme.NimblePodsTheme
-import in.org.gotit.nimblepods.presentation.theme.LocalDesignSystem
-import in.org.gotit.nimblepods.presentation.theme.sectionHeader
+import `in`.org.gotit.nimblepods.presentation.theme.DesignSystem
+import `in`.org.gotit.nimblepods.presentation.theme.NimblePodsTheme
+import `in`.org.gotit.nimblepods.presentation.theme.LocalDesignSystem
+import `in`.org.gotit.nimblepods.presentation.theme.sectionHeader
 
 @Composable
 fun StyledList(

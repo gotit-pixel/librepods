@@ -18,7 +18,7 @@
 
 @file:OptIn(ExperimentalEncodingApi::class)
 
-package in.org.gotit.nimblepods.utils
+package `in`.org.gotit.nimblepods.utils
 
 import android.content.SharedPreferences
 import android.media.AudioManager
@@ -30,7 +30,7 @@ import android.os.SystemClock
 import android.util.Log
 import android.view.KeyEvent
 import androidx.annotation.RequiresApi
-import in.org.gotit.nimblepods.services.ServiceManager
+import `in`.org.gotit.nimblepods.services.ServiceManager
 import kotlin.io.encoding.ExperimentalEncodingApi
 
 object MediaController {

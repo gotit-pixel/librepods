@@ -16,7 +16,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-package in.org.gotit.nimblepods.presentation.viewmodel
+package `in`.org.gotit.nimblepods.presentation.viewmodel
 
 import android.content.BroadcastReceiver
 import android.content.Context
@@ -36,25 +36,25 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import in.org.gotit.nimblepods.BuildConfig
-import in.org.gotit.nimblepods.billing.BillingManager
-import in.org.gotit.nimblepods.bluetooth.AACPManager
-import in.org.gotit.nimblepods.bluetooth.AACPManager.Companion.ControlCommandIdentifiers
-import in.org.gotit.nimblepods.bluetooth.ATTCCCDHandles
-import in.org.gotit.nimblepods.bluetooth.ATTHandles
-import in.org.gotit.nimblepods.bluetooth.BluetoothConnectionManager
-import in.org.gotit.nimblepods.data.AirPodsInstance
-import in.org.gotit.nimblepods.data.AirPodsModels
-import in.org.gotit.nimblepods.data.AirPodsNotifications
-import in.org.gotit.nimblepods.data.Battery
-import in.org.gotit.nimblepods.data.BatteryComponent
-import in.org.gotit.nimblepods.data.BatteryStatus
-import in.org.gotit.nimblepods.data.Capability
-import in.org.gotit.nimblepods.data.ControlCommandRepository
-import in.org.gotit.nimblepods.data.CustomEq
-import in.org.gotit.nimblepods.data.StemAction
-import in.org.gotit.nimblepods.data.XposedRemotePrefProvider
-import in.org.gotit.nimblepods.services.AirPodsService
+import `in`.org.gotit.nimblepods.BuildConfig
+import `in`.org.gotit.nimblepods.billing.BillingManager
+import `in`.org.gotit.nimblepods.bluetooth.AACPManager
+import `in`.org.gotit.nimblepods.bluetooth.AACPManager.Companion.ControlCommandIdentifiers
+import `in`.org.gotit.nimblepods.bluetooth.ATTCCCDHandles
+import `in`.org.gotit.nimblepods.bluetooth.ATTHandles
+import `in`.org.gotit.nimblepods.bluetooth.BluetoothConnectionManager
+import `in`.org.gotit.nimblepods.data.AirPodsInstance
+import `in`.org.gotit.nimblepods.data.AirPodsModels
+import `in`.org.gotit.nimblepods.data.AirPodsNotifications
+import `in`.org.gotit.nimblepods.data.Battery
+import `in`.org.gotit.nimblepods.data.BatteryComponent
+import `in`.org.gotit.nimblepods.data.BatteryStatus
+import `in`.org.gotit.nimblepods.data.Capability
+import `in`.org.gotit.nimblepods.data.ControlCommandRepository
+import `in`.org.gotit.nimblepods.data.CustomEq
+import `in`.org.gotit.nimblepods.data.StemAction
+import `in`.org.gotit.nimblepods.data.XposedRemotePrefProvider
+import `in`.org.gotit.nimblepods.services.AirPodsService
 
 @Suppress("ArrayInDataClass")
 data class AirPodsUiState(

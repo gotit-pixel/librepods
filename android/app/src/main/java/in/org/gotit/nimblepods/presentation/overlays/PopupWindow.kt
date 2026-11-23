@@ -17,7 +17,7 @@
 */
 
 
-package in.org.gotit.nimblepods.presentation.overlays
+package `in`.org.gotit.nimblepods.presentation.overlays
 
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
@@ -45,11 +45,11 @@ import android.widget.ImageButton
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.VideoView
-import in.org.gotit.nimblepods.R
-import in.org.gotit.nimblepods.data.AirPodsNotifications
-import in.org.gotit.nimblepods.data.Battery
-import in.org.gotit.nimblepods.data.BatteryComponent
-import in.org.gotit.nimblepods.data.BatteryStatus
+import `in`.org.gotit.nimblepods.R
+import `in`.org.gotit.nimblepods.data.AirPodsNotifications
+import `in`.org.gotit.nimblepods.data.Battery
+import `in`.org.gotit.nimblepods.data.BatteryComponent
+import `in`.org.gotit.nimblepods.data.BatteryStatus
 
 @SuppressLint("InflateParams", "ClickableViewAccessibility")
 class PopupWindow(

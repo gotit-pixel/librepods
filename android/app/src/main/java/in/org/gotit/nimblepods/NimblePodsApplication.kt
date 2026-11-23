@@ -1,4 +1,4 @@
-package in.org.gotit.nimblepods
+package `in`.org.gotit.nimblepods
 
 import android.app.Application
 import androidx.lifecycle.DefaultLifecycleObserver
@@ -6,10 +6,10 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.ProcessLifecycleOwner
 import io.github.libxposed.service.XposedService
 import io.github.libxposed.service.XposedServiceHelper
-import in.org.gotit.nimblepods.billing.BillingManager
-import in.org.gotit.nimblepods.billing.BillingProviderFactory
-import in.org.gotit.nimblepods.utils.XposedServiceHolder
-import in.org.gotit.nimblepods.utils.XposedState
+import `in`.org.gotit.nimblepods.billing.BillingManager
+import `in`.org.gotit.nimblepods.billing.BillingProviderFactory
+import `in`.org.gotit.nimblepods.utils.XposedServiceHolder
+import `in`.org.gotit.nimblepods.utils.XposedState
 
 class NimblePodsApplication: Application(), XposedServiceHelper.OnServiceListener, DefaultLifecycleObserver {
 

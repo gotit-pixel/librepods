@@ -1,4 +1,4 @@
-package in.org.gotit.nimblepods.presentation.screens.onboarding
+package `in`.org.gotit.nimblepods.presentation.screens.onboarding
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -18,8 +18,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import in.org.gotit.nimblepods.BuildConfig
-import in.org.gotit.nimblepods.R
+import `in`.org.gotit.nimblepods.BuildConfig
+import `in`.org.gotit.nimblepods.R
 
 @Composable
 fun PrivacyPolicyPage(

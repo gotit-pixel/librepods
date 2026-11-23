@@ -16,7 +16,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-package in.org.gotit.nimblepods.bluetooth
+package `in`.org.gotit.nimblepods.bluetooth
 
 import android.util.Log
 import java.util.concurrent.ConcurrentHashMap

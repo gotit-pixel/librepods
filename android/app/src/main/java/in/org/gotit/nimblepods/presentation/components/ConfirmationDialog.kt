@@ -16,7 +16,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-package in.org.gotit.nimblepods.presentation.components
+package `in`.org.gotit.nimblepods.presentation.components
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.fadeIn
@@ -63,9 +63,9 @@ import com.kyant.backdrop.effects.blur
 import com.kyant.backdrop.effects.lens
 import com.kyant.backdrop.effects.vibrancy
 import dev.chrisbanes.haze.materials.ExperimentalHazeMaterialsApi
-import in.org.gotit.nimblepods.R
-import in.org.gotit.nimblepods.presentation.theme.DesignSystem
-import in.org.gotit.nimblepods.presentation.theme.LocalDesignSystem
+import `in`.org.gotit.nimblepods.R
+import `in`.org.gotit.nimblepods.presentation.theme.DesignSystem
+import `in`.org.gotit.nimblepods.presentation.theme.LocalDesignSystem
 
 @OptIn(ExperimentalMaterial3Api::class)
 @ExperimentalHazeMaterialsApi

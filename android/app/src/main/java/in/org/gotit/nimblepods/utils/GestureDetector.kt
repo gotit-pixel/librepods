@@ -18,7 +18,7 @@
 
 @file:OptIn(ExperimentalEncodingApi::class)
 
-package in.org.gotit.nimblepods.utils
+package `in`.org.gotit.nimblepods.utils
 
 import android.os.Build
 import android.util.Log
@@ -29,8 +29,8 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import in.org.gotit.nimblepods.services.AirPodsService
-import in.org.gotit.nimblepods.services.ServiceManager
+import `in`.org.gotit.nimblepods.services.AirPodsService
+import `in`.org.gotit.nimblepods.services.ServiceManager
 import java.util.Collections
 import java.util.concurrent.CopyOnWriteArrayList
 import kotlin.io.encoding.ExperimentalEncodingApi

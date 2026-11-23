@@ -18,7 +18,7 @@
 
 @file:OptIn(ExperimentalEncodingApi::class)
 
-package in.org.gotit.nimblepods.presentation.widgets
+package `in`.org.gotit.nimblepods.presentation.widgets
 
 import android.app.PendingIntent
 import android.appwidget.AppWidgetManager
@@ -27,9 +27,9 @@ import android.content.Context
 import android.content.Intent
 import android.util.Log
 import android.widget.RemoteViews
-import in.org.gotit.nimblepods.R
-import in.org.gotit.nimblepods.bluetooth.AACPManager
-import in.org.gotit.nimblepods.services.ServiceManager
+import `in`.org.gotit.nimblepods.R
+import `in`.org.gotit.nimblepods.bluetooth.AACPManager
+import `in`.org.gotit.nimblepods.services.ServiceManager
 import kotlin.io.encoding.ExperimentalEncodingApi
 
 class NoiseControlWidget : AppWidgetProvider() {

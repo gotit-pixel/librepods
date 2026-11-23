@@ -21,7 +21,7 @@
 
 @file:OptIn(ExperimentalEncodingApi::class)
 
-package in.org.gotit.nimblepods.presentation.screens
+package `in`.org.gotit.nimblepods.presentation.screens
 
 import android.graphics.Paint
 import androidx.compose.animation.AnimatedContent
@@ -84,14 +84,14 @@ import dev.chrisbanes.haze.materials.ExperimentalHazeMaterialsApi
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
-import in.org.gotit.nimblepods.R
-import in.org.gotit.nimblepods.presentation.components.StyledButton
-import in.org.gotit.nimblepods.presentation.components.StyledToggle
-import in.org.gotit.nimblepods.presentation.theme.DesignSystem
-import in.org.gotit.nimblepods.presentation.theme.LocalDesignSystem
-import in.org.gotit.nimblepods.presentation.viewmodel.AirPodsViewModel
-import in.org.gotit.nimblepods.services.ServiceManager
-import in.org.gotit.nimblepods.utils.HeadTracking
+import `in`.org.gotit.nimblepods.R
+import `in`.org.gotit.nimblepods.presentation.components.StyledButton
+import `in`.org.gotit.nimblepods.presentation.components.StyledToggle
+import `in`.org.gotit.nimblepods.presentation.theme.DesignSystem
+import `in`.org.gotit.nimblepods.presentation.theme.LocalDesignSystem
+import `in`.org.gotit.nimblepods.presentation.viewmodel.AirPodsViewModel
+import `in`.org.gotit.nimblepods.services.ServiceManager
+import `in`.org.gotit.nimblepods.utils.HeadTracking
 import kotlin.io.encoding.ExperimentalEncodingApi
 import kotlin.math.abs
 

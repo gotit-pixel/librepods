@@ -16,9 +16,9 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-package in.org.gotit.nimblepods.data
+package `in`.org.gotit.nimblepods.data
 
-import in.org.gotit.nimblepods.R
+import `in`.org.gotit.nimblepods.R
 import java.util.Collections.emptySet
 
 open class AirPodsBase(

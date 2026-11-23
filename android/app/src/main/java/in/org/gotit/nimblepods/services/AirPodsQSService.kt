@@ -18,7 +18,7 @@
 
 @file:OptIn(ExperimentalEncodingApi::class)
 
-package in.org.gotit.nimblepods.services
+package `in`.org.gotit.nimblepods.services
 
 import android.annotation.SuppressLint
 import android.app.PendingIntent
@@ -33,12 +33,12 @@ import android.service.quicksettings.Tile
 import android.service.quicksettings.TileService
 import android.util.Log
 import androidx.annotation.RequiresApi
-import in.org.gotit.nimblepods.QuickSettingsDialogActivity
-import in.org.gotit.nimblepods.R
-import in.org.gotit.nimblepods.bluetooth.AACPManager
-import in.org.gotit.nimblepods.bluetooth.BluetoothConnectionManager
-import in.org.gotit.nimblepods.data.AirPodsNotifications
-import in.org.gotit.nimblepods.data.NoiseControlMode
+import `in`.org.gotit.nimblepods.QuickSettingsDialogActivity
+import `in`.org.gotit.nimblepods.R
+import `in`.org.gotit.nimblepods.bluetooth.AACPManager
+import `in`.org.gotit.nimblepods.bluetooth.BluetoothConnectionManager
+import `in`.org.gotit.nimblepods.data.AirPodsNotifications
+import `in`.org.gotit.nimblepods.data.NoiseControlMode
 import kotlin.io.encoding.ExperimentalEncodingApi
 
 @RequiresApi(Build.VERSION_CODES.Q)

@@ -16,7 +16,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-package in.org.gotit.nimblepods.presentation.screens
+package `in`.org.gotit.nimblepods.presentation.screens
 
 import android.content.Intent
 import android.content.pm.PackageManager
@@ -79,23 +79,23 @@ import androidx.core.net.toUri
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.kyant.backdrop.backdrops.layerBackdrop
 import com.kyant.backdrop.backdrops.rememberLayerBackdrop
-import in.org.gotit.nimblepods.BuildConfig
-import in.org.gotit.nimblepods.R
-import in.org.gotit.nimblepods.presentation.components.AppInfoCard
-import in.org.gotit.nimblepods.presentation.components.DeviceInfoCard
-import in.org.gotit.nimblepods.presentation.components.StyledBottomSheet
-import in.org.gotit.nimblepods.presentation.components.StyledButton
-import in.org.gotit.nimblepods.presentation.components.StyledIconButton
-import in.org.gotit.nimblepods.presentation.components.StyledInputField
-import in.org.gotit.nimblepods.presentation.components.StyledList
-import in.org.gotit.nimblepods.presentation.components.StyledListItem
-import in.org.gotit.nimblepods.presentation.components.StyledSlider
-import in.org.gotit.nimblepods.presentation.components.StyledToggle
-import in.org.gotit.nimblepods.presentation.theme.DesignSystem
-import in.org.gotit.nimblepods.presentation.theme.LocalDesignSystem
-import in.org.gotit.nimblepods.presentation.theme.MaterialTypography
-import in.org.gotit.nimblepods.presentation.viewmodel.AppSettingsViewModel
-import in.org.gotit.nimblepods.utils.XposedState
+import `in`.org.gotit.nimblepods.BuildConfig
+import `in`.org.gotit.nimblepods.R
+import `in`.org.gotit.nimblepods.presentation.components.AppInfoCard
+import `in`.org.gotit.nimblepods.presentation.components.DeviceInfoCard
+import `in`.org.gotit.nimblepods.presentation.components.StyledBottomSheet
+import `in`.org.gotit.nimblepods.presentation.components.StyledButton
+import `in`.org.gotit.nimblepods.presentation.components.StyledIconButton
+import `in`.org.gotit.nimblepods.presentation.components.StyledInputField
+import `in`.org.gotit.nimblepods.presentation.components.StyledList
+import `in`.org.gotit.nimblepods.presentation.components.StyledListItem
+import `in`.org.gotit.nimblepods.presentation.components.StyledSlider
+import `in`.org.gotit.nimblepods.presentation.components.StyledToggle
+import `in`.org.gotit.nimblepods.presentation.theme.DesignSystem
+import `in`.org.gotit.nimblepods.presentation.theme.LocalDesignSystem
+import `in`.org.gotit.nimblepods.presentation.theme.MaterialTypography
+import `in`.org.gotit.nimblepods.presentation.viewmodel.AppSettingsViewModel
+import `in`.org.gotit.nimblepods.utils.XposedState
 import java.util.concurrent.TimeUnit
 
 @OptIn(ExperimentalMaterial3Api::class)

@@ -16,7 +16,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-package in.org.gotit.nimblepods.presentation.screens
+package `in`.org.gotit.nimblepods.presentation.screens
 
 import android.content.Intent
 import android.widget.Toast
@@ -95,8 +95,8 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import in.org.gotit.nimblepods.R
-import in.org.gotit.nimblepods.utils.LogCollector
+import `in`.org.gotit.nimblepods.R
+import `in`.org.gotit.nimblepods.utils.LogCollector
 import java.io.File
 import java.text.SimpleDateFormat
 import java.util.Date

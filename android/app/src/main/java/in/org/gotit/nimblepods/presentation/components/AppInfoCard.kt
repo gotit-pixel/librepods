@@ -16,12 +16,12 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-package in.org.gotit.nimblepods.presentation.components
+package `in`.org.gotit.nimblepods.presentation.components
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
-import in.org.gotit.nimblepods.BuildConfig
-import in.org.gotit.nimblepods.R
+import `in`.org.gotit.nimblepods.BuildConfig
+import `in`.org.gotit.nimblepods.R
 
 @Composable
 fun AppInfoCard(

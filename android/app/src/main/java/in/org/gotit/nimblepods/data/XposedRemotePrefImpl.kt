@@ -1,7 +1,7 @@
-package in.org.gotit.nimblepods.data
+package `in`.org.gotit.nimblepods.data
 
 import androidx.core.content.edit
-import in.org.gotit.nimblepods.utils.XposedServiceHolder
+import `in`.org.gotit.nimblepods.utils.XposedServiceHolder
 
 class XposedRemotePrefImpl: XposedRemotePref {
     override fun isAvailable(): Boolean {

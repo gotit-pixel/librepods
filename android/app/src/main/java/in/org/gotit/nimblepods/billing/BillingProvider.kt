@@ -16,7 +16,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-package in.org.gotit.nimblepods.billing
+package `in`.org.gotit.nimblepods.billing
 
 import android.app.Activity
 import kotlinx.coroutines.flow.StateFlow

@@ -16,7 +16,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-package in.org.gotit.nimblepods.presentation.screens
+package `in`.org.gotit.nimblepods.presentation.screens
 
 import androidx.compose.animation.Crossfade
 import androidx.compose.foundation.Canvas
@@ -89,16 +89,16 @@ import com.kyant.backdrop.effects.lens
 import com.kyant.backdrop.highlight.Highlight
 import kotlinx.coroutines.FlowPreview
 import kotlinx.coroutines.flow.debounce
-import in.org.gotit.nimblepods.R
-import in.org.gotit.nimblepods.presentation.components.StyledButton
-import in.org.gotit.nimblepods.presentation.components.StyledList
-import in.org.gotit.nimblepods.presentation.components.StyledListItem
-import in.org.gotit.nimblepods.presentation.theme.DesignSystem
-import in.org.gotit.nimblepods.presentation.theme.NimblePodsTheme
-import in.org.gotit.nimblepods.presentation.theme.LocalDesignSystem
-import in.org.gotit.nimblepods.presentation.viewmodel.AirPodsUiState
-import in.org.gotit.nimblepods.presentation.viewmodel.AirPodsViewModel
-import in.org.gotit.nimblepods.presentation.viewmodel.demoState
+import `in`.org.gotit.nimblepods.R
+import `in`.org.gotit.nimblepods.presentation.components.StyledButton
+import `in`.org.gotit.nimblepods.presentation.components.StyledList
+import `in`.org.gotit.nimblepods.presentation.components.StyledListItem
+import `in`.org.gotit.nimblepods.presentation.theme.DesignSystem
+import `in`.org.gotit.nimblepods.presentation.theme.NimblePodsTheme
+import `in`.org.gotit.nimblepods.presentation.theme.LocalDesignSystem
+import `in`.org.gotit.nimblepods.presentation.viewmodel.AirPodsUiState
+import `in`.org.gotit.nimblepods.presentation.viewmodel.AirPodsViewModel
+import `in`.org.gotit.nimblepods.presentation.viewmodel.demoState
 import kotlin.math.abs
 import kotlin.math.roundToInt
 import kotlin.time.Duration.Companion.milliseconds

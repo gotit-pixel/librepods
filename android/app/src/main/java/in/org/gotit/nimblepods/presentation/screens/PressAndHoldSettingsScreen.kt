@@ -18,7 +18,7 @@
 
 @file:OptIn(ExperimentalStdlibApi::class, ExperimentalEncodingApi::class)
 
-package in.org.gotit.nimblepods.presentation.screens
+package `in`.org.gotit.nimblepods.presentation.screens
 
 import android.util.Log
 import androidx.compose.foundation.background
@@ -48,16 +48,16 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.kyant.backdrop.backdrops.rememberLayerBackdrop
 import dev.chrisbanes.haze.materials.ExperimentalHazeMaterialsApi
-import in.org.gotit.nimblepods.R
-import in.org.gotit.nimblepods.bluetooth.AACPManager
-import in.org.gotit.nimblepods.data.StemAction
-import in.org.gotit.nimblepods.presentation.components.ListItemOrientation
-import in.org.gotit.nimblepods.presentation.components.StyledButton
-import in.org.gotit.nimblepods.presentation.components.StyledList
-import in.org.gotit.nimblepods.presentation.components.StyledListItem
-import in.org.gotit.nimblepods.presentation.theme.DesignSystem
-import in.org.gotit.nimblepods.presentation.theme.LocalDesignSystem
-import in.org.gotit.nimblepods.presentation.viewmodel.AirPodsViewModel
+import `in`.org.gotit.nimblepods.R
+import `in`.org.gotit.nimblepods.bluetooth.AACPManager
+import `in`.org.gotit.nimblepods.data.StemAction
+import `in`.org.gotit.nimblepods.presentation.components.ListItemOrientation
+import `in`.org.gotit.nimblepods.presentation.components.StyledButton
+import `in`.org.gotit.nimblepods.presentation.components.StyledList
+import `in`.org.gotit.nimblepods.presentation.components.StyledListItem
+import `in`.org.gotit.nimblepods.presentation.theme.DesignSystem
+import `in`.org.gotit.nimblepods.presentation.theme.LocalDesignSystem
+import `in`.org.gotit.nimblepods.presentation.viewmodel.AirPodsViewModel
 import kotlin.experimental.and
 import kotlin.io.encoding.ExperimentalEncodingApi
 

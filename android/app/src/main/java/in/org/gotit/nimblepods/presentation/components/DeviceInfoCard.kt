@@ -1,10 +1,10 @@
-package in.org.gotit.nimblepods.presentation.components
+package `in`.org.gotit.nimblepods.presentation.components
 
 import android.os.Build
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
-import in.org.gotit.nimblepods.R
-import in.org.gotit.nimblepods.utils.XposedState
+import `in`.org.gotit.nimblepods.R
+import `in`.org.gotit.nimblepods.utils.XposedState
 
 @Composable
 fun DeviceInfoCard() {

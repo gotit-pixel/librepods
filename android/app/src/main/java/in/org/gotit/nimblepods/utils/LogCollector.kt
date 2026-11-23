@@ -16,7 +16,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-package in.org.gotit.nimblepods.utils
+package `in`.org.gotit.nimblepods.utils
 
 import android.content.Context
 import kotlinx.coroutines.Dispatchers
@@ -67,7 +67,7 @@ class LogCollector(private val context: Context) {
     private suspend fun getPackageUIDs(): Pair<String?, String?> {
         return withContext(Dispatchers.IO) {
             val btUid = getBluetoothUID()
-            val appUid = executeRootCommand("dumpsys package in.org.gotit.nimblepods | grep -m 1 \"uid=\" | sed -E 's/.*uid=([0-9]+).*/\\1/'")
+            val appUid = executeRootCommand("dumpsys package `in`.org.gotit.nimblepods | grep -m 1 \"uid=\" | sed -E 's/.*uid=([0-9]+).*/\\1/'")
                 .trim()
                 .takeIf { it.isNotEmpty() }
 

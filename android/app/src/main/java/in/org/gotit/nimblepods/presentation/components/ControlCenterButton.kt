@@ -18,7 +18,7 @@
 
 @file:Suppress("unused")
 
-package in.org.gotit.nimblepods.presentation.components
+package `in`.org.gotit.nimblepods.presentation.components
 
 import androidx.compose.animation.animateColorAsState
 import androidx.compose.foundation.background

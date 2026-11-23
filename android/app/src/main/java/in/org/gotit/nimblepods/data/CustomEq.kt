@@ -1,6 +1,6 @@
-package in.org.gotit.nimblepods.data
+package `in`.org.gotit.nimblepods.data
 
-import in.org.gotit.nimblepods.bluetooth.AACPManager
+import `in`.org.gotit.nimblepods.bluetooth.AACPManager
 
 enum class CustomEqBand { LOW, MID, HIGH }
 

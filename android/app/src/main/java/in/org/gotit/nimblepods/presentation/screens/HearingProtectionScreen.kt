@@ -16,7 +16,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-package in.org.gotit.nimblepods.presentation.screens
+package `in`.org.gotit.nimblepods.presentation.screens
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
@@ -39,14 +39,14 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import com.kyant.backdrop.backdrops.layerBackdrop
 import com.kyant.backdrop.backdrops.rememberLayerBackdrop
-import in.org.gotit.nimblepods.R
-import in.org.gotit.nimblepods.bluetooth.AACPManager
-import in.org.gotit.nimblepods.bluetooth.ATTHandles
-import in.org.gotit.nimblepods.presentation.components.StyledButton
-import in.org.gotit.nimblepods.presentation.components.StyledToggle
-import in.org.gotit.nimblepods.presentation.theme.DesignSystem
-import in.org.gotit.nimblepods.presentation.theme.LocalDesignSystem
-import in.org.gotit.nimblepods.presentation.viewmodel.AirPodsViewModel
+import `in`.org.gotit.nimblepods.R
+import `in`.org.gotit.nimblepods.bluetooth.AACPManager
+import `in`.org.gotit.nimblepods.bluetooth.ATTHandles
+import `in`.org.gotit.nimblepods.presentation.components.StyledButton
+import `in`.org.gotit.nimblepods.presentation.components.StyledToggle
+import `in`.org.gotit.nimblepods.presentation.theme.DesignSystem
+import `in`.org.gotit.nimblepods.presentation.theme.LocalDesignSystem
+import `in`.org.gotit.nimblepods.presentation.viewmodel.AirPodsViewModel
 
 @Composable
 fun HearingProtectionScreen(viewModel: AirPodsViewModel, navigateToPurchase: () -> Unit) {

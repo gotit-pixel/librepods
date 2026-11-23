@@ -16,9 +16,9 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-package in.org.gotit.nimblepods.presentation.screens
+package `in`.org.gotit.nimblepods.presentation.screens
 
-// import in.org.gotit.nimblepods.utils.RadareOffsetFinder
+// import `in`.org.gotit.nimblepods.utils.RadareOffsetFinder
 import android.annotation.SuppressLint
 import android.util.Log
 import androidx.compose.foundation.background
@@ -59,18 +59,18 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.debounce
 import kotlinx.coroutines.launch
-import in.org.gotit.nimblepods.R
-import in.org.gotit.nimblepods.bluetooth.AACPManager
-import in.org.gotit.nimblepods.bluetooth.ATTHandles
-import in.org.gotit.nimblepods.data.Capability
-import in.org.gotit.nimblepods.presentation.components.StyledButton
-import in.org.gotit.nimblepods.presentation.components.StyledList
-import in.org.gotit.nimblepods.presentation.components.StyledListItem
-import in.org.gotit.nimblepods.presentation.components.StyledSlider
-import in.org.gotit.nimblepods.presentation.components.StyledToggle
-import in.org.gotit.nimblepods.presentation.theme.DesignSystem
-import in.org.gotit.nimblepods.presentation.theme.LocalDesignSystem
-import in.org.gotit.nimblepods.presentation.viewmodel.AirPodsViewModel
+import `in`.org.gotit.nimblepods.R
+import `in`.org.gotit.nimblepods.bluetooth.AACPManager
+import `in`.org.gotit.nimblepods.bluetooth.ATTHandles
+import `in`.org.gotit.nimblepods.data.Capability
+import `in`.org.gotit.nimblepods.presentation.components.StyledButton
+import `in`.org.gotit.nimblepods.presentation.components.StyledList
+import `in`.org.gotit.nimblepods.presentation.components.StyledListItem
+import `in`.org.gotit.nimblepods.presentation.components.StyledSlider
+import `in`.org.gotit.nimblepods.presentation.components.StyledToggle
+import `in`.org.gotit.nimblepods.presentation.theme.DesignSystem
+import `in`.org.gotit.nimblepods.presentation.theme.LocalDesignSystem
+import `in`.org.gotit.nimblepods.presentation.viewmodel.AirPodsViewModel
 import kotlin.io.encoding.ExperimentalEncodingApi
 import kotlin.time.Duration.Companion.milliseconds
 

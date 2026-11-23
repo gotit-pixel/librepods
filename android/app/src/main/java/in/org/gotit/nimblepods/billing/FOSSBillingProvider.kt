@@ -16,13 +16,13 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-package in.org.gotit.nimblepods.billing
+package `in`.org.gotit.nimblepods.billing
 
 import android.app.Activity
 import android.content.Context
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
-import in.org.gotit.nimblepods.R
+import `in`.org.gotit.nimblepods.R
 
 /** The FOSS build makes all app features available without a payment gate. */
 class FOSSBillingProvider(context: Context) : BillingProvider {

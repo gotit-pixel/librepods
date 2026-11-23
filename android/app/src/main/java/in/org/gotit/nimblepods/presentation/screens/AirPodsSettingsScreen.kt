@@ -18,9 +18,9 @@
 
 @file:OptIn(ExperimentalEncodingApi::class)
 
-package in.org.gotit.nimblepods.presentation.screens
+package `in`.org.gotit.nimblepods.presentation.screens
 
-// import in.org.gotit.nimblepods.utils.RadareOffsetFinder
+// import `in`.org.gotit.nimblepods.utils.RadareOffsetFinder
 import android.annotation.SuppressLint
 import android.content.Context.MODE_PRIVATE
 import android.content.Intent
@@ -98,31 +98,31 @@ import com.kyant.backdrop.drawBackdrop
 import com.kyant.backdrop.highlight.Highlight
 import dev.chrisbanes.haze.materials.ExperimentalHazeMaterialsApi
 import kotlinx.coroutines.delay
-import in.org.gotit.nimblepods.BuildConfig
-import in.org.gotit.nimblepods.R
-import in.org.gotit.nimblepods.bluetooth.AACPManager
-import in.org.gotit.nimblepods.bluetooth.ATTHandles
-import in.org.gotit.nimblepods.data.AirPodsPro3
-import in.org.gotit.nimblepods.data.Capability
-import in.org.gotit.nimblepods.presentation.MaterialIcons
-import in.org.gotit.nimblepods.presentation.components.AboutCard
-import in.org.gotit.nimblepods.presentation.components.AudioSettings
-import in.org.gotit.nimblepods.presentation.components.BatteryView
-import in.org.gotit.nimblepods.presentation.components.CallControlSettings
-import in.org.gotit.nimblepods.presentation.components.ConnectionSettings
-import in.org.gotit.nimblepods.presentation.components.HearingHealthSettings
-import in.org.gotit.nimblepods.presentation.components.MaterialButtonStyle
-import in.org.gotit.nimblepods.presentation.components.NoiseControlSettings
-import in.org.gotit.nimblepods.presentation.components.PressAndHoldSettings
-import in.org.gotit.nimblepods.presentation.components.StyledButton
-import in.org.gotit.nimblepods.presentation.components.StyledListItem
-import in.org.gotit.nimblepods.presentation.components.StyledToggle
-import in.org.gotit.nimblepods.presentation.theme.DesignSystem
-import in.org.gotit.nimblepods.presentation.theme.NimblePodsTheme
-import in.org.gotit.nimblepods.presentation.theme.LocalDesignSystem
-import in.org.gotit.nimblepods.presentation.viewmodel.AirPodsUiState
-import in.org.gotit.nimblepods.presentation.viewmodel.AirPodsViewModel
-import in.org.gotit.nimblepods.presentation.viewmodel.demoState
+import `in`.org.gotit.nimblepods.BuildConfig
+import `in`.org.gotit.nimblepods.R
+import `in`.org.gotit.nimblepods.bluetooth.AACPManager
+import `in`.org.gotit.nimblepods.bluetooth.ATTHandles
+import `in`.org.gotit.nimblepods.data.AirPodsPro3
+import `in`.org.gotit.nimblepods.data.Capability
+import `in`.org.gotit.nimblepods.presentation.MaterialIcons
+import `in`.org.gotit.nimblepods.presentation.components.AboutCard
+import `in`.org.gotit.nimblepods.presentation.components.AudioSettings
+import `in`.org.gotit.nimblepods.presentation.components.BatteryView
+import `in`.org.gotit.nimblepods.presentation.components.CallControlSettings
+import `in`.org.gotit.nimblepods.presentation.components.ConnectionSettings
+import `in`.org.gotit.nimblepods.presentation.components.HearingHealthSettings
+import `in`.org.gotit.nimblepods.presentation.components.MaterialButtonStyle
+import `in`.org.gotit.nimblepods.presentation.components.NoiseControlSettings
+import `in`.org.gotit.nimblepods.presentation.components.PressAndHoldSettings
+import `in`.org.gotit.nimblepods.presentation.components.StyledButton
+import `in`.org.gotit.nimblepods.presentation.components.StyledListItem
+import `in`.org.gotit.nimblepods.presentation.components.StyledToggle
+import `in`.org.gotit.nimblepods.presentation.theme.DesignSystem
+import `in`.org.gotit.nimblepods.presentation.theme.NimblePodsTheme
+import `in`.org.gotit.nimblepods.presentation.theme.LocalDesignSystem
+import `in`.org.gotit.nimblepods.presentation.viewmodel.AirPodsUiState
+import `in`.org.gotit.nimblepods.presentation.viewmodel.AirPodsViewModel
+import `in`.org.gotit.nimblepods.presentation.viewmodel.demoState
 import java.util.concurrent.TimeUnit
 import kotlin.io.encoding.ExperimentalEncodingApi
 import kotlin.math.min

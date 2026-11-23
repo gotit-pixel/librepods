@@ -16,7 +16,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-package in.org.gotit.nimblepods.presentation.screens
+package `in`.org.gotit.nimblepods.presentation.screens
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
@@ -44,17 +44,17 @@ import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.kyant.backdrop.backdrops.layerBackdrop
 import com.kyant.backdrop.backdrops.rememberLayerBackdrop
-import in.org.gotit.nimblepods.R
-import in.org.gotit.nimblepods.presentation.components.ListItemOrientation
-import in.org.gotit.nimblepods.presentation.components.MaterialButtonStyle
-import in.org.gotit.nimblepods.presentation.components.StyledButton
-import in.org.gotit.nimblepods.presentation.components.StyledList
-import in.org.gotit.nimblepods.presentation.components.StyledListItem
-import in.org.gotit.nimblepods.presentation.navigation.Screen
-import in.org.gotit.nimblepods.presentation.theme.DesignSystem
-import in.org.gotit.nimblepods.presentation.theme.LocalDesignSystem
-import in.org.gotit.nimblepods.presentation.viewmodel.PurchaseViewModel
-import in.org.gotit.nimblepods.utils.XposedState
+import `in`.org.gotit.nimblepods.R
+import `in`.org.gotit.nimblepods.presentation.components.ListItemOrientation
+import `in`.org.gotit.nimblepods.presentation.components.MaterialButtonStyle
+import `in`.org.gotit.nimblepods.presentation.components.StyledButton
+import `in`.org.gotit.nimblepods.presentation.components.StyledList
+import `in`.org.gotit.nimblepods.presentation.components.StyledListItem
+import `in`.org.gotit.nimblepods.presentation.navigation.Screen
+import `in`.org.gotit.nimblepods.presentation.theme.DesignSystem
+import `in`.org.gotit.nimblepods.presentation.theme.LocalDesignSystem
+import `in`.org.gotit.nimblepods.presentation.viewmodel.PurchaseViewModel
+import `in`.org.gotit.nimblepods.utils.XposedState
 
 @Composable
 fun PurchaseScreen(

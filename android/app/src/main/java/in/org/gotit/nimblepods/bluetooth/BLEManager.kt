@@ -16,7 +16,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-package in.org.gotit.nimblepods.bluetooth
+package `in`.org.gotit.nimblepods.bluetooth
 
 import android.annotation.SuppressLint
 import android.bluetooth.BluetoothManager
@@ -30,7 +30,7 @@ import android.content.SharedPreferences
 import android.os.Handler
 import android.os.Looper
 import android.util.Log
-import in.org.gotit.nimblepods.utils.BluetoothCryptography
+import `in`.org.gotit.nimblepods.utils.BluetoothCryptography
 import javax.crypto.Cipher
 import javax.crypto.spec.SecretKeySpec
 import kotlin.collections.iterator

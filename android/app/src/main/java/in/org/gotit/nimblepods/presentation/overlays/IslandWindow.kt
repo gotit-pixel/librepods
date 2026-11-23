@@ -18,7 +18,7 @@
 
 @file:OptIn(ExperimentalEncodingApi::class)
 
-package in.org.gotit.nimblepods.presentation.overlays
+package `in`.org.gotit.nimblepods.presentation.overlays
 
 import android.animation.Animator
 import android.animation.AnimatorListenerAdapter
@@ -58,12 +58,12 @@ import androidx.core.net.toUri
 import androidx.dynamicanimation.animation.DynamicAnimation
 import androidx.dynamicanimation.animation.SpringAnimation
 import androidx.dynamicanimation.animation.SpringForce
-import in.org.gotit.nimblepods.R
-import in.org.gotit.nimblepods.data.AirPodsNotifications
-import in.org.gotit.nimblepods.data.Battery
-import in.org.gotit.nimblepods.data.BatteryComponent
-import in.org.gotit.nimblepods.data.BatteryStatus
-import in.org.gotit.nimblepods.services.ServiceManager
+import `in`.org.gotit.nimblepods.R
+import `in`.org.gotit.nimblepods.data.AirPodsNotifications
+import `in`.org.gotit.nimblepods.data.Battery
+import `in`.org.gotit.nimblepods.data.BatteryComponent
+import `in`.org.gotit.nimblepods.data.BatteryStatus
+import `in`.org.gotit.nimblepods.services.ServiceManager
 import kotlin.io.encoding.ExperimentalEncodingApi
 import kotlin.math.abs
 

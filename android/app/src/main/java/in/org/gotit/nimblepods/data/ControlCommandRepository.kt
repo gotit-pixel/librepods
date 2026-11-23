@@ -16,10 +16,10 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-package in.org.gotit.nimblepods.data
+package `in`.org.gotit.nimblepods.data
 
-import in.org.gotit.nimblepods.bluetooth.AACPManager
-import in.org.gotit.nimblepods.bluetooth.AACPManager.Companion.ControlCommandIdentifiers
+import `in`.org.gotit.nimblepods.bluetooth.AACPManager
+import `in`.org.gotit.nimblepods.bluetooth.AACPManager.Companion.ControlCommandIdentifiers
 
 class ControlCommandRepository(
     private val aacpManager: AACPManager

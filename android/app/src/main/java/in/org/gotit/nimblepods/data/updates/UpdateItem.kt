@@ -1,4 +1,4 @@
-package in.org.gotit.nimblepods.data.updates
+package `in`.org.gotit.nimblepods.data.updates
 
 import androidx.compose.runtime.Composable
 

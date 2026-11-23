@@ -18,11 +18,11 @@
 
 @file:OptIn(ExperimentalEncodingApi::class)
 
-package in.org.gotit.nimblepods.presentation.components
+package `in`.org.gotit.nimblepods.presentation.components
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource
-import in.org.gotit.nimblepods.R
+import `in`.org.gotit.nimblepods.R
 import kotlin.io.encoding.ExperimentalEncodingApi
 
 @Composable

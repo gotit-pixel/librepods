@@ -16,7 +16,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-package in.org.gotit.nimblepods.billing
+package `in`.org.gotit.nimblepods.billing
 
 import android.app.Activity
 import android.content.Context
@@ -42,7 +42,7 @@ import kotlinx.coroutines.SupervisorJob
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
-import in.org.gotit.nimblepods.R
+import `in`.org.gotit.nimblepods.R
 
 const val TAG = "PlayBillingProvider"
 

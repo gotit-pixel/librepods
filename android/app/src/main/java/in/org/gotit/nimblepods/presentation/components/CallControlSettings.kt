@@ -18,7 +18,7 @@
 
 @file:OptIn(ExperimentalEncodingApi::class)
 
-package in.org.gotit.nimblepods.presentation.components
+package `in`.org.gotit.nimblepods.presentation.components
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -27,7 +27,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.res.stringResource
 import dev.chrisbanes.haze.materials.ExperimentalHazeMaterialsApi
-import in.org.gotit.nimblepods.R
+import `in`.org.gotit.nimblepods.R
 import kotlin.io.encoding.ExperimentalEncodingApi
 
 @ExperimentalHazeMaterialsApi

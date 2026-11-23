@@ -18,7 +18,7 @@
 
 @file:OptIn(ExperimentalEncodingApi::class)
 
-package in.org.gotit.nimblepods.presentation.components
+package `in`.org.gotit.nimblepods.presentation.components
 
 import android.content.res.Configuration
 import androidx.compose.foundation.Image
@@ -44,11 +44,11 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import in.org.gotit.nimblepods.R
-import in.org.gotit.nimblepods.data.Battery
-import in.org.gotit.nimblepods.data.BatteryComponent
-import in.org.gotit.nimblepods.data.BatteryStatus
-import in.org.gotit.nimblepods.presentation.theme.NimblePodsTheme
+import `in`.org.gotit.nimblepods.R
+import `in`.org.gotit.nimblepods.data.Battery
+import `in`.org.gotit.nimblepods.data.BatteryComponent
+import `in`.org.gotit.nimblepods.data.BatteryStatus
+import `in`.org.gotit.nimblepods.presentation.theme.NimblePodsTheme
 import kotlin.io.encoding.ExperimentalEncodingApi
 
 @Composable

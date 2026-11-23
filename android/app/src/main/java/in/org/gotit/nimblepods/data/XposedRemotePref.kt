@@ -1,4 +1,4 @@
-package in.org.gotit.nimblepods.data
+package `in`.org.gotit.nimblepods.data
 
 interface XposedRemotePref {
     fun isAvailable(): Boolean

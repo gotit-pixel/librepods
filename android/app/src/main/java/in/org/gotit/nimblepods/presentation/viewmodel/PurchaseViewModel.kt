@@ -1,4 +1,4 @@
-package in.org.gotit.nimblepods.presentation.viewmodel
+package `in`.org.gotit.nimblepods.presentation.viewmodel
 
 import android.app.Activity
 import android.app.Application
@@ -9,7 +9,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
-import in.org.gotit.nimblepods.billing.BillingManager
+import `in`.org.gotit.nimblepods.billing.BillingManager
 
 data class PurchaseUiState(
     val isPremium: Boolean = false,

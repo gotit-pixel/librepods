@@ -1,4 +1,4 @@
-package in.org.gotit.nimblepods.presentation.screens.onboarding
+package `in`.org.gotit.nimblepods.presentation.screens.onboarding
 
 import android.content.Intent
 import android.provider.Settings
@@ -46,10 +46,10 @@ import com.google.accompanist.permissions.ExperimentalPermissionsApi
 import com.google.accompanist.permissions.isGranted
 import com.google.accompanist.permissions.rememberMultiplePermissionsState
 import com.google.accompanist.permissions.rememberPermissionState
-import in.org.gotit.nimblepods.presentation.MaterialIcons
-import in.org.gotit.nimblepods.presentation.components.ListItemOrientation
-import in.org.gotit.nimblepods.presentation.components.StyledList
-import in.org.gotit.nimblepods.presentation.components.StyledListItem
+import `in`.org.gotit.nimblepods.presentation.MaterialIcons
+import `in`.org.gotit.nimblepods.presentation.components.ListItemOrientation
+import `in`.org.gotit.nimblepods.presentation.components.StyledList
+import `in`.org.gotit.nimblepods.presentation.components.StyledListItem
 
 @OptIn(ExperimentalPermissionsApi::class)
 @Composable

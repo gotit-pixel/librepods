@@ -1,4 +1,4 @@
-package in.org.gotit.nimblepods.presentation.screens
+package `in`.org.gotit.nimblepods.presentation.screens
 
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.animateFloatAsState
@@ -75,13 +75,13 @@ import androidx.compose.ui.tooling.preview.Wallpapers.RED_DOMINATED_EXAMPLE
 import androidx.compose.ui.unit.Density
 import androidx.compose.ui.unit.dp
 import androidx.graphics.shapes.Morph
-import in.org.gotit.nimblepods.BuildConfig
-import in.org.gotit.nimblepods.R
-import in.org.gotit.nimblepods.data.updates.UpdateItem
-import in.org.gotit.nimblepods.data.updates.updates
-import in.org.gotit.nimblepods.presentation.theme.DesignSystem
-import in.org.gotit.nimblepods.presentation.theme.NimblePodsTheme
-import in.org.gotit.nimblepods.presentation.theme.LocalDesignSystem
+import `in`.org.gotit.nimblepods.BuildConfig
+import `in`.org.gotit.nimblepods.R
+import `in`.org.gotit.nimblepods.data.updates.UpdateItem
+import `in`.org.gotit.nimblepods.data.updates.updates
+import `in`.org.gotit.nimblepods.presentation.theme.DesignSystem
+import `in`.org.gotit.nimblepods.presentation.theme.NimblePodsTheme
+import `in`.org.gotit.nimblepods.presentation.theme.LocalDesignSystem
 import kotlin.math.min
 
 @OptIn(ExperimentalMaterial3Api::class)

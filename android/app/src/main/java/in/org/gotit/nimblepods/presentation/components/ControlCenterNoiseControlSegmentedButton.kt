@@ -16,7 +16,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-package in.org.gotit.nimblepods.presentation.components
+package `in`.org.gotit.nimblepods.presentation.components
 
 import androidx.compose.animation.core.Spring
 import androidx.compose.animation.core.animateDpAsState
@@ -55,8 +55,8 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import in.org.gotit.nimblepods.R
-import in.org.gotit.nimblepods.data.NoiseControlMode
+import `in`.org.gotit.nimblepods.R
+import `in`.org.gotit.nimblepods.data.NoiseControlMode
 
 private val ContainerColor = Color(0x593C3C3E)
 private val SelectedIndicatorColorGray = Color(0xFF6C6C6E)

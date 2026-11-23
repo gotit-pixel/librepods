@@ -18,7 +18,7 @@
 
 @file:OptIn(ExperimentalEncodingApi::class)
 
-package in.org.gotit.nimblepods
+package `in`.org.gotit.nimblepods
 
 import android.annotation.SuppressLint
 import android.content.BroadcastReceiver
@@ -85,15 +85,15 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import kotlinx.coroutines.launch
-import in.org.gotit.nimblepods.presentation.components.AdaptiveRainbowBrush
-import in.org.gotit.nimblepods.presentation.components.ControlCenterNoiseControlSegmentedButton
-import in.org.gotit.nimblepods.presentation.components.IconAreaSize
-import in.org.gotit.nimblepods.presentation.components.VerticalVolumeSlider
-import in.org.gotit.nimblepods.data.AirPodsNotifications
-import in.org.gotit.nimblepods.data.NoiseControlMode
-import in.org.gotit.nimblepods.services.AirPodsService
-import in.org.gotit.nimblepods.presentation.theme.NimblePodsTheme
-import in.org.gotit.nimblepods.bluetooth.AACPManager
+import `in`.org.gotit.nimblepods.presentation.components.AdaptiveRainbowBrush
+import `in`.org.gotit.nimblepods.presentation.components.ControlCenterNoiseControlSegmentedButton
+import `in`.org.gotit.nimblepods.presentation.components.IconAreaSize
+import `in`.org.gotit.nimblepods.presentation.components.VerticalVolumeSlider
+import `in`.org.gotit.nimblepods.data.AirPodsNotifications
+import `in`.org.gotit.nimblepods.data.NoiseControlMode
+import `in`.org.gotit.nimblepods.services.AirPodsService
+import `in`.org.gotit.nimblepods.presentation.theme.NimblePodsTheme
+import `in`.org.gotit.nimblepods.bluetooth.AACPManager
 import kotlin.io.encoding.ExperimentalEncodingApi
 import kotlin.math.abs
 

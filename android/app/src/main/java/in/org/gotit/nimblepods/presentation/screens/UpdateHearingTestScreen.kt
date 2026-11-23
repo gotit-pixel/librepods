@@ -16,7 +16,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-package in.org.gotit.nimblepods.presentation.screens
+package `in`.org.gotit.nimblepods.presentation.screens
 
 import android.util.Log
 import androidx.compose.foundation.background
@@ -63,17 +63,17 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import kotlinx.coroutines.Job
-import in.org.gotit.nimblepods.R
-import in.org.gotit.nimblepods.bluetooth.ATTHandles
-import in.org.gotit.nimblepods.data.HearingAidSettings
-import in.org.gotit.nimblepods.data.parseHearingAidSettingsResponse
-import in.org.gotit.nimblepods.data.sendHearingAidSettings
-import in.org.gotit.nimblepods.presentation.theme.DesignSystem
-import in.org.gotit.nimblepods.presentation.theme.NimblePodsTheme
-import in.org.gotit.nimblepods.presentation.theme.LocalDesignSystem
-import in.org.gotit.nimblepods.presentation.viewmodel.AirPodsUiState
-import in.org.gotit.nimblepods.presentation.viewmodel.AirPodsViewModel
-import in.org.gotit.nimblepods.presentation.viewmodel.demoState
+import `in`.org.gotit.nimblepods.R
+import `in`.org.gotit.nimblepods.bluetooth.ATTHandles
+import `in`.org.gotit.nimblepods.data.HearingAidSettings
+import `in`.org.gotit.nimblepods.data.parseHearingAidSettingsResponse
+import `in`.org.gotit.nimblepods.data.sendHearingAidSettings
+import `in`.org.gotit.nimblepods.presentation.theme.DesignSystem
+import `in`.org.gotit.nimblepods.presentation.theme.NimblePodsTheme
+import `in`.org.gotit.nimblepods.presentation.theme.LocalDesignSystem
+import `in`.org.gotit.nimblepods.presentation.viewmodel.AirPodsUiState
+import `in`.org.gotit.nimblepods.presentation.viewmodel.AirPodsViewModel
+import `in`.org.gotit.nimblepods.presentation.viewmodel.demoState
 
 private const val TAG = "UpdateHearingTestScreen"
 

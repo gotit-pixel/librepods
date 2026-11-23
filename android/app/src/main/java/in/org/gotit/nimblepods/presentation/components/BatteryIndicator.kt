@@ -16,7 +16,7 @@
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 
-package in.org.gotit.nimblepods.presentation.components
+package `in`.org.gotit.nimblepods.presentation.components
 
 
 import android.content.res.Configuration
@@ -52,9 +52,9 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import in.org.gotit.nimblepods.R
-import in.org.gotit.nimblepods.data.BatteryStatus
-import in.org.gotit.nimblepods.presentation.theme.NimblePodsTheme
+import `in`.org.gotit.nimblepods.R
+import `in`.org.gotit.nimblepods.data.BatteryStatus
+import `in`.org.gotit.nimblepods.presentation.theme.NimblePodsTheme
 import kotlin.math.cos
 import kotlin.math.min
 import kotlin.math.sin

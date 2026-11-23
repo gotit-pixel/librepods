@@ -1,4 +1,4 @@
-package in.org.gotit.nimblepods.presentation.screens.onboarding
+package `in`.org.gotit.nimblepods.presentation.screens.onboarding
 
 import android.content.Context
 import androidx.activity.compose.BackHandler
@@ -40,12 +40,12 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.launch
-import in.org.gotit.nimblepods.R
-import in.org.gotit.nimblepods.presentation.theme.NimblePodsTheme
-import in.org.gotit.nimblepods.utils.XposedState
-import in.org.gotit.nimblepods.utils.bypassDeviceCheck
-import in.org.gotit.nimblepods.utils.isSupported
-import in.org.gotit.nimblepods.utils.removeDeviceCheckBypass
+import `in`.org.gotit.nimblepods.R
+import `in`.org.gotit.nimblepods.presentation.theme.NimblePodsTheme
+import `in`.org.gotit.nimblepods.utils.XposedState
+import `in`.org.gotit.nimblepods.utils.bypassDeviceCheck
+import `in`.org.gotit.nimblepods.utils.isSupported
+import `in`.org.gotit.nimblepods.utils.removeDeviceCheckBypass
 
 @Composable
 fun OnboardingScreen(
