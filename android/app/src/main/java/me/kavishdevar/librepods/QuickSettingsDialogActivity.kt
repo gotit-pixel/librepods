@@ -92,7 +92,7 @@ import me.kavishdevar.librepods.presentation.components.VerticalVolumeSlider
 import me.kavishdevar.librepods.data.AirPodsNotifications
 import me.kavishdevar.librepods.data.NoiseControlMode
 import me.kavishdevar.librepods.services.AirPodsService
-import me.kavishdevar.librepods.presentation.theme.LibrePodsTheme
+import me.kavishdevar.librepods.presentation.theme.NimblePodsTheme
 import me.kavishdevar.librepods.bluetooth.AACPManager
 import kotlin.io.encoding.ExperimentalEncodingApi
 import kotlin.math.abs
@@ -111,7 +111,7 @@ class QuickSettingsDialogActivity : ComponentActivity() {
             isBound = true
             Log.d("QSActivity", "Service bound")
             setContent {
-                LibrePodsTheme {
+                NimblePodsTheme {
                     DraggableDismissBox(
                         onDismiss = { finish() },
                         onlyCollapseWhenClicked = {
@@ -155,7 +155,7 @@ class QuickSettingsDialogActivity : ComponentActivity() {
         }
 
         setContent {
-            LibrePodsTheme {
+            NimblePodsTheme {
                 DraggableDismissBox(
                     onDismiss = { finish() },
                     onlyCollapseWhenClicked = {

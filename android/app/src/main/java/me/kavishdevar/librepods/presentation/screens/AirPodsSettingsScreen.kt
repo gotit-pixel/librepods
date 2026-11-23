@@ -118,7 +118,7 @@ import me.kavishdevar.librepods.presentation.components.StyledButton
 import me.kavishdevar.librepods.presentation.components.StyledListItem
 import me.kavishdevar.librepods.presentation.components.StyledToggle
 import me.kavishdevar.librepods.presentation.theme.DesignSystem
-import me.kavishdevar.librepods.presentation.theme.LibrePodsTheme
+import me.kavishdevar.librepods.presentation.theme.NimblePodsTheme
 import me.kavishdevar.librepods.presentation.theme.LocalDesignSystem
 import me.kavishdevar.librepods.presentation.viewmodel.AirPodsUiState
 import me.kavishdevar.librepods.presentation.viewmodel.AirPodsViewModel
@@ -281,7 +281,7 @@ fun AirPodsSettingsScreen(
                                 val emailIntent = Intent(Intent.ACTION_SENDTO).apply {
                                     data = "mailto:".toUri()
                                     putExtra(Intent.EXTRA_EMAIL, arrayOf("billing@kavish.xyz"))
-                                    putExtra(Intent.EXTRA_SUBJECT, "LibrePods Play billing error")
+                                    putExtra(Intent.EXTRA_SUBJECT, "NimblePods billing error")
                                     putExtra(
                                         Intent.EXTRA_TEXT,
                                         "Please enter your GitHub username to restore your premium access:\n\nGitHub username: "
@@ -301,7 +301,7 @@ fun AirPodsSettingsScreen(
                                 fontSize = 16.sp,
                                 fontWeight = FontWeight.Bold,
                                 color = Color.White,
-                                fontFamily = FontFamily(Font(R.font.sf_pro))
+                                fontFamily = FontFamily.Default
                             )
                         )
                     }
@@ -311,8 +311,8 @@ fun AirPodsSettingsScreen(
             item(key = "battery") {
                 BatteryView(
                     batteryList = state.battery,
-                    budsRes = state.instance?.model?.budsRes ?: R.drawable.airpods_pro_2_buds,
-                    caseRes = state.instance?.model?.caseRes ?: R.drawable.airpods_pro_2_case
+                    budsRes = state.instance?.model?.budsRes ?: R.drawable.nimblepods_buds,
+                    caseRes = state.instance?.model?.caseRes ?: R.drawable.nimblepods_case
                 )
             }
             item(key = "spacer_battery") {
@@ -866,7 +866,7 @@ fun AirPodsSettingsScreen(
                     }
                 }
 
-                DesignSystem.Apple -> {
+                DesignSystem.Classic -> {
                     Column(
                         modifier = Modifier.fillMaxWidth(),
                         verticalArrangement = Arrangement.Center
@@ -951,7 +951,7 @@ fun AirPodsSettingsScreen(
 @Preview(name = "Apple")
 @Composable
 fun AirPodsSettingsScreenPreviewApple() {
-    LibrePodsTheme(
+    NimblePodsTheme(
         m3eEnabled = false
     ) {
         Box(
@@ -998,7 +998,7 @@ fun AirPodsSettingsScreenPreviewApple() {
 @Preview(name = "Material")
 @Composable
 fun AirPodsSettingsScreenPreviewMaterial() {
-    LibrePodsTheme(
+    NimblePodsTheme(
         m3eEnabled = true
     ) {
         Box (

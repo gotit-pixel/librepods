@@ -186,7 +186,7 @@
     <string name="custom_camera_package">自定义相机应用 ID</string>
     <string name="custom_camera_package_set_success">自定义相机应用 ID 设置成功</string>
     <string name="app_listener_service_label">相机监听器</string>
-    <string name="app_listener_service_description">LibrePods 的监听服务，用于检测相机何时处于活动状态，以激活 AirPods 上的相机控制。</string>
+    <string name="app_listener_service_description">NimblePods 的监听服务，用于检测相机何时处于活动状态，以激活 AirPods 上的相机控制。</string>
     <string name="open_source_licenses">开源许可证</string>
     <string name="hearing_test">更新听力测试</string>
     <string name="update_hearing_test">更新听力测试结果</string>
@@ -228,7 +228,7 @@
     <string name="automatic_connection_description">启用并自定义自动连接到 AirPods。</string>
     <string name="customizations_description">解锁应用的个性化设置，包括小组件中的手机电量、对话感知音量，以及更多即将推出的个性化功能。</string>
     <string name="support_the_development">支持开发</string>
-    <string name="support_development_description">LibrePods 由一位开发者独立开发。升级有助于让这款应用持续维护下去。</string>
+    <string name="support_development_description">NimblePods 由一位开发者独立开发。升级有助于让这款应用持续维护下去。</string>
     <string name="feature_availability_disclaimer">功能是否可用取决于你的 AirPods 型号和固件版本。</string>
     <string name="contact">联系方式</string>
     <string name="email">电子邮件</string>
@@ -264,13 +264,13 @@
     <string name="describe_your_issue">描述你遇到的问题</string>
     <string name="optimized_charging">优化充电上限</string>
     <string name="optimized_charging_description">AirPods 可学习你的每日用量，并决定何时充电至优化上限以及何时允许完全充电。此上限根据你的每日用量调整，并可在长期内延长电池寿命。\n此设置可能对不受支持的 AirPods 或固件版本较旧的 AirPods 无效。</string>
-    <string name="enable_app_in_xposed_or_update_device">请更新你的设备，或在 Xposed 中启用 LibrePods 并重新打开应用以继续。</string>
+    <string name="enable_app_in_xposed_or_update_device">请更新你的设备，或在 Xposed 中启用 NimblePods 并重新打开应用以继续。</string>
     <string name="play_foss_premium_banner">您的应用已更新为 Google Play 版本，高级功能将在 %1$d 天后停用。请从您的原始安装源更新以继续使用 FOSS 版本，或等待此期限结束后直接购买升级；如果您已是支持者，请点按此处申请促销代码。</string>
     <string name="custom">自定义</string>
     <string name="recommended">推荐</string>
     <string name="appearance">外观</string>
     <string name="material3e">Material 3 Expressive</string>
-    <string name="update_m3e_description">LibrePods 现已支持基于 Material 3 Expressive 的全新外观，包括更新的字体排版和自适应配色方案。\n你可以在应用设置中切换回 Apple 外观。</string>
+    <string name="update_m3e_description">NimblePods 现已支持基于 Material 3 Expressive 的全新外观，包括更新的字体排版和自适应配色方案。\n你可以在应用设置中切换回经典外观。</string>
     <string name="update_equalizer_description">仅在最新的 AirPods Beta 固件上可用。安装 Beta 固件需要一台运行 OS 27 版本的 Apple 设备。</string>
     <string name="what_s_new">新功能</string>
     <string name="reconnecting">正在重新连接</string>

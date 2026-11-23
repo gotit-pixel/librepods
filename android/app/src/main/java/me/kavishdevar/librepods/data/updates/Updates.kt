@@ -21,7 +21,7 @@ val update1_0_0 = listOf(
             descriptionRes = R.string.update_equalizer_description,
             demoComposeable = @Composable {
                 when (LocalDesignSystem.current) {
-                    DesignSystem.Apple -> {
+                    DesignSystem.Classic -> {
                         EqualizerScreenPreviewApple()
                     }
                     DesignSystem.Material -> {

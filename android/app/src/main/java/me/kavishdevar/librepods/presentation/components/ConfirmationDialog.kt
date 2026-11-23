@@ -127,7 +127,7 @@ fun ConfirmationDialog(
                     }
                 }
             }
-            DesignSystem.Apple -> {
+            DesignSystem.Classic -> {
                 Box(
                     modifier = Modifier.fillMaxSize(),
                     contentAlignment = Alignment.Center

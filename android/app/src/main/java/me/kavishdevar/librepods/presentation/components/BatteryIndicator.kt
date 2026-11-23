@@ -54,7 +54,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import me.kavishdevar.librepods.R
 import me.kavishdevar.librepods.data.BatteryStatus
-import me.kavishdevar.librepods.presentation.theme.LibrePodsTheme
+import me.kavishdevar.librepods.presentation.theme.NimblePodsTheme
 import kotlin.math.cos
 import kotlin.math.min
 import kotlin.math.sin
@@ -177,7 +177,7 @@ fun BatteryIndicator(
             Text(
                 text = "\uDBC0\uDEE6", style = TextStyle(
                     fontSize = 14.sp,
-                    fontFamily = FontFamily(Font(R.font.sf_pro)),
+                    fontFamily = FontFamily.Default,
                     color = batteryFillColor,
                     textAlign = TextAlign.Center
                 ), modifier = Modifier.scale(scaleAnim.value)
@@ -191,7 +191,7 @@ fun BatteryIndicator(
             color = batteryTextColor,
             style = TextStyle(
                 fontSize = 14.sp,
-                fontFamily = FontFamily(Font(R.font.sf_pro)),
+                fontFamily = FontFamily.Default,
                 textAlign = TextAlign.Center
             ),
         )
@@ -201,7 +201,7 @@ fun BatteryIndicator(
 @Preview(uiMode = Configuration.UI_MODE_NIGHT_YES)
 @Composable
 fun BatteryIndicatorPreview() {
-    LibrePodsTheme(m3eEnabled = false) {
+    NimblePodsTheme(m3eEnabled = false) {
         BatteryIndicator(
             batteryPercentage = 50,
             status = BatteryStatus.OPTIMIZED_CHARGING,

@@ -50,30 +50,30 @@ enum class Capability {
 class AirPods: AirPodsBase(
     modelNumber = listOf("A1523", "A1722"),
     name = "AirPods 1",
-    budsRes = R.drawable.airpods_1_buds,
-    leftBudsRes = R.drawable.airpods_1_left,
-    rightBudsRes = R.drawable.airpods_1_right,
-    caseRes = R.drawable.airpods_1_case,
+    budsRes = R.drawable.nimblepods_buds,
+    leftBudsRes = R.drawable.nimblepods_buds,
+    rightBudsRes = R.drawable.nimblepods_buds,
+    caseRes = R.drawable.nimblepods_case,
     capabilities = emptySet()
 )
 
 class AirPods2: AirPodsBase(
     modelNumber = listOf("A2032", "A2031"),
     name = "AirPods 2",
-    budsRes = R.drawable.airpods_2_buds,
-    leftBudsRes = R.drawable.airpods_2_left,
-    rightBudsRes = R.drawable.airpods_2_right,
-    caseRes = R.drawable.airpods_2_case,
+    budsRes = R.drawable.nimblepods_buds,
+    leftBudsRes = R.drawable.nimblepods_buds,
+    rightBudsRes = R.drawable.nimblepods_buds,
+    caseRes = R.drawable.nimblepods_case,
     capabilities = emptySet()
 )
 
 class AirPods3: AirPodsBase(
     modelNumber = listOf("A2565", "A2564"),
     name = "AirPods 3",
-    budsRes = R.drawable.airpods_3_buds,
-    leftBudsRes = R.drawable.airpods_3_left,
-    rightBudsRes = R.drawable.airpods_3_right,
-    caseRes = R.drawable.airpods_3_case,
+    budsRes = R.drawable.nimblepods_buds,
+    leftBudsRes = R.drawable.nimblepods_buds,
+    rightBudsRes = R.drawable.nimblepods_buds,
+    caseRes = R.drawable.nimblepods_case,
     capabilities = setOf(
         Capability.HEAD_GESTURES
     )
@@ -82,10 +82,10 @@ class AirPods3: AirPodsBase(
 class AirPods4: AirPodsBase(
     modelNumber = listOf("A3053", "A3050", "A3054"),
     name = "AirPods 4",
-    budsRes = R.drawable.airpods_4_buds,
-    leftBudsRes = R.drawable.airpods_4_left,
-    rightBudsRes = R.drawable.airpods_4_right,
-    caseRes = R.drawable.airpods_4_case,
+    budsRes = R.drawable.nimblepods_buds,
+    leftBudsRes = R.drawable.nimblepods_buds,
+    rightBudsRes = R.drawable.nimblepods_buds,
+    caseRes = R.drawable.nimblepods_case,
     capabilities = setOf(
         Capability.HEAD_GESTURES,
         Capability.SLEEP_DETECTION,
@@ -96,10 +96,10 @@ class AirPods4: AirPodsBase(
 class AirPods4ANC: AirPodsBase(
     modelNumber = listOf("A3056", "A3055", "A3057"),
     name = "AirPods 4 (ANC)",
-    budsRes = R.drawable.airpods_4_anc_buds,
-    leftBudsRes = R.drawable.airpods_4_anc_left,
-    rightBudsRes = R.drawable.airpods_4_anc_right,
-    caseRes = R.drawable.airpods_4_anc_case,
+    budsRes = R.drawable.nimblepods_buds,
+    leftBudsRes = R.drawable.nimblepods_buds,
+    rightBudsRes = R.drawable.nimblepods_buds,
+    caseRes = R.drawable.nimblepods_case,
     capabilities = setOf(
         Capability.LISTENING_MODE,
         Capability.CONVERSATION_AWARENESS,
@@ -114,10 +114,10 @@ class AirPods4ANC: AirPodsBase(
 class AirPods5: AirPodsBase(
     modelNumber = listOf("A3531", "A3532", "A3533"),
     name = "AirPods 5",
-    budsRes = R.drawable.airpods_5_buds,
-    leftBudsRes = R.drawable.airpods_5_left,
-    rightBudsRes = R.drawable.airpods_5_right,
-    caseRes = R.drawable.airpods_5_case,
+    budsRes = R.drawable.nimblepods_buds,
+    leftBudsRes = R.drawable.nimblepods_buds,
+    rightBudsRes = R.drawable.nimblepods_buds,
+    caseRes = R.drawable.nimblepods_case,
     capabilities = setOf(
         Capability.LISTENING_MODE,
         Capability.CONVERSATION_AWARENESS,
@@ -132,10 +132,10 @@ class AirPods5: AirPodsBase(
 class AirPods5WCC: AirPodsBase(
     modelNumber = listOf("A3439", "A3440", "A3441"),
     name = "AirPods 5 with Wireless Charging Case",
-    budsRes = R.drawable.airpods_4_buds,
-    leftBudsRes = R.drawable.airpods_4_left,
-    rightBudsRes = R.drawable.airpods_4_right,
-    caseRes = R.drawable.airpods_4_case,
+    budsRes = R.drawable.nimblepods_buds,
+    leftBudsRes = R.drawable.nimblepods_buds,
+    rightBudsRes = R.drawable.nimblepods_buds,
+    caseRes = R.drawable.nimblepods_case,
     capabilities = setOf(
         Capability.LISTENING_MODE,
         Capability.CONVERSATION_AWARENESS,
@@ -152,10 +152,10 @@ class AirPodsPro1: AirPodsBase(
     modelNumber = listOf("A2084", "A2083"),
     name = "AirPods Pro 1",
     displayName = "AirPods Pro",
-    budsRes = R.drawable.airpods_pro_1_buds,
-    leftBudsRes = R.drawable.airpods_pro_1_left,
-    rightBudsRes = R.drawable.airpods_pro_1_right,
-    caseRes = R.drawable.airpods_pro_1_case,
+    budsRes = R.drawable.nimblepods_buds,
+    leftBudsRes = R.drawable.nimblepods_buds,
+    rightBudsRes = R.drawable.nimblepods_buds,
+    caseRes = R.drawable.nimblepods_case,
     capabilities = setOf(
         Capability.LISTENING_MODE
     )
@@ -165,10 +165,10 @@ class AirPodsPro2Lightning: AirPodsBase(
     modelNumber = listOf("A2931", "A2699", "A2698"),
     name = "AirPods Pro 2 with Magsafe Charging Case (Lightning)",
     displayName = "AirPods Pro",
-    budsRes = R.drawable.airpods_pro_2_buds,
-    leftBudsRes = R.drawable.airpods_pro_2_left,
-    rightBudsRes = R.drawable.airpods_pro_2_right,
-    caseRes = R.drawable.airpods_pro_2_case,
+    budsRes = R.drawable.nimblepods_buds,
+    leftBudsRes = R.drawable.nimblepods_buds,
+    rightBudsRes = R.drawable.nimblepods_buds,
+    caseRes = R.drawable.nimblepods_case,
     capabilities = setOf(
         Capability.LISTENING_MODE,
         Capability.CONVERSATION_AWARENESS,
@@ -187,10 +187,10 @@ class AirPodsPro2USBC: AirPodsBase(
     modelNumber = listOf("A3047", "A3048", "A3049"),
     name = "AirPods Pro 2 with Magsafe Charging Case (USB-C)",
     displayName = "AirPods Pro",
-    budsRes = R.drawable.airpods_pro_2_buds,
-    leftBudsRes = R.drawable.airpods_pro_2_left,
-    rightBudsRes = R.drawable.airpods_pro_2_right,
-    caseRes = R.drawable.airpods_pro_2_case,
+    budsRes = R.drawable.nimblepods_buds,
+    leftBudsRes = R.drawable.nimblepods_buds,
+    rightBudsRes = R.drawable.nimblepods_buds,
+    caseRes = R.drawable.nimblepods_case,
     capabilities = setOf(
         Capability.LISTENING_MODE,
         Capability.CONVERSATION_AWARENESS,
@@ -209,10 +209,10 @@ class AirPodsPro3: AirPodsBase(
     modelNumber = listOf("A3063", "A3064", "A3065"),
     name = "AirPods Pro 3",
     displayName = "AirPods Pro",
-    budsRes = R.drawable.airpods_pro_3_buds,
-    leftBudsRes = R.drawable.airpods_pro_3_left,
-    rightBudsRes = R.drawable.airpods_pro_3_right,
-    caseRes = R.drawable.airpods_pro_3_case,
+    budsRes = R.drawable.nimblepods_buds,
+    leftBudsRes = R.drawable.nimblepods_buds,
+    rightBudsRes = R.drawable.nimblepods_buds,
+    caseRes = R.drawable.nimblepods_case,
     capabilities = setOf(
         Capability.LISTENING_MODE,
         Capability.CONVERSATION_AWARENESS,

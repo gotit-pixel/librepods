@@ -10,7 +10,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import me.kavishdevar.librepods.presentation.theme.LibrePodsTheme
+import me.kavishdevar.librepods.presentation.theme.NimblePodsTheme
 
 @Composable
 fun LoadingScreen() {
@@ -29,7 +29,7 @@ fun LoadingScreen() {
 @Preview
 @Composable
 fun LoadingScreenPreview() {
-    LibrePodsTheme {
+    NimblePodsTheme {
         LoadingScreen()
     }
 }

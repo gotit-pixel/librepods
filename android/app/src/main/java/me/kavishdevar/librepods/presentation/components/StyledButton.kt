@@ -131,7 +131,7 @@ fun StyledButton(
                 }
             }
         }
-        DesignSystem.Apple -> {
+        DesignSystem.Classic -> {
             val isInteractive = enabled && isInteractive
             val scope = rememberCoroutineScope()
             val haptics = LocalHapticFeedback.current

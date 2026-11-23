@@ -40,8 +40,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.graphics.ImageBitmap
-import androidx.compose.ui.res.imageResource
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
@@ -49,7 +48,7 @@ import me.kavishdevar.librepods.R
 import me.kavishdevar.librepods.data.Battery
 import me.kavishdevar.librepods.data.BatteryComponent
 import me.kavishdevar.librepods.data.BatteryStatus
-import me.kavishdevar.librepods.presentation.theme.LibrePodsTheme
+import me.kavishdevar.librepods.presentation.theme.NimblePodsTheme
 import kotlin.io.encoding.ExperimentalEncodingApi
 
 @Composable
@@ -62,11 +61,15 @@ fun BatteryView(
     val right = batteryList.find { it.component == BatteryComponent.RIGHT }
     val case = batteryList.find { it.component == BatteryComponent.CASE }
 
-    val leftLevel = left?.level ?: 0
-    val rightLevel = right?.level ?: 0
-    val caseLevel = case?.level ?: 0
+    val leftLevel = left?.level?.coerceIn(0, 100) ?: 0
+    val rightLevel = right?.level?.coerceIn(0, 100) ?: 0
+    val caseLevel = case?.level?.coerceIn(0, 100) ?: 0
 
-    val isSingleDisplay = left?.status == right?.status && (leftLevel - rightLevel) in -3..3
+    val leftAvailable = left != null && left.status != BatteryStatus.DISCONNECTED
+    val rightAvailable = right != null && right.status != BatteryStatus.DISCONNECTED
+    val caseAvailable = case != null && case.status != BatteryStatus.DISCONNECTED
+    val isSingleDisplay = leftAvailable && rightAvailable &&
+        left?.status == right?.status && (leftLevel - rightLevel) in -3..3
 
     Box(
         modifier = Modifier.fillMaxWidth(),
@@ -93,7 +96,7 @@ fun BatteryView(
                     contentAlignment = Alignment.Center
                 ) {
                     Image(
-                        bitmap = ImageBitmap.imageResource(budsRes),
+                        painter = painterResource(budsRes),
                         contentDescription = stringResource(R.string.buds),
                         modifier = Modifier.fillMaxWidth()
                     )
@@ -113,7 +116,7 @@ fun BatteryView(
                             modifier = Modifier.fillMaxWidth(),
                             horizontalArrangement = Arrangement.Center
                         ) {
-                            if (leftLevel > 0 || left?.status != BatteryStatus.DISCONNECTED) {
+                            if (leftAvailable) {
                                 BatteryIndicator(
                                     leftLevel,
                                     left?.status ?: BatteryStatus.NOT_CHARGING,
@@ -121,11 +124,11 @@ fun BatteryView(
                                 )
                             }
 
-                            if (leftLevel > 0 && rightLevel > 0) {
+                            if (leftAvailable && rightAvailable) {
                                 Spacer(modifier = Modifier.width(16.dp))
                             }
 
-                            if (rightLevel > 0 || right?.status != BatteryStatus.DISCONNECTED) {
+                            if (rightAvailable) {
                                 BatteryIndicator(
                                     rightLevel,
                                     right?.status ?: BatteryStatus.NOT_CHARGING,
@@ -151,7 +154,7 @@ fun BatteryView(
                     contentAlignment = Alignment.Center
                 ) {
                     Image(
-                        bitmap = ImageBitmap.imageResource(caseRes),
+                        painter = painterResource(caseRes),
                         contentDescription = stringResource(R.string.case_alt),
                         modifier = Modifier.fillMaxWidth()
                     )
@@ -161,7 +164,7 @@ fun BatteryView(
                     modifier = Modifier.fillMaxWidth(),
                     contentAlignment = Alignment.Center
                 ) {
-                    if (caseLevel > 0 || case?.status != BatteryStatus.DISCONNECTED) {
+                    if (caseAvailable) {
                         BatteryIndicator(
                             caseLevel,
                             case?.status ?: BatteryStatus.NOT_CHARGING,
@@ -184,7 +187,7 @@ fun BatteryViewPreview() {
     )
 
     val bg = if (isSystemInDarkTheme()) Color.Black else Color(0xFFF2F2F7)
-    LibrePodsTheme(m3eEnabled = false) {
+    NimblePodsTheme(m3eEnabled = false) {
         Box(
             modifier = Modifier
                 .background(bg)
@@ -192,8 +195,8 @@ fun BatteryViewPreview() {
         ) {
             BatteryView(
                 batteryList = fakeBattery,
-                budsRes = R.drawable.airpods_5_wireless_buds,
-                caseRes = R.drawable.airpods_5_wireless_case
+                budsRes = R.drawable.nimblepods_buds,
+                caseRes = R.drawable.nimblepods_case
             )
         }
     }

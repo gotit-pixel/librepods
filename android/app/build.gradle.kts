@@ -112,12 +112,6 @@ android {
             version = "3.22.1"
         }
     }
-    sourceSets {
-        getByName("main") {
-            res.directories += "src/main/res-apple"
-        }
-    }
-
     ndkVersion = "30.0.14904198"
 
     flavorDimensions += "env"

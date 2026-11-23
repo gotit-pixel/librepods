@@ -185,7 +185,7 @@ private fun StyledListItemContent(
     val scope = rememberCoroutineScope()
 
     when (LocalDesignSystem.current) {
-        DesignSystem.Apple -> {
+        DesignSystem.Classic -> {
             val trailingContentDefault: @Composable () -> Unit = {
                 if (trailingContent == null) {
                     if (onClick != null) {
@@ -199,7 +199,7 @@ private fun StyledListItemContent(
                                 text = "􀆅",
                                 style = TextStyle(
                                     fontSize = 20.sp,
-                                    fontFamily = FontFamily(Font(R.font.sf_pro)),
+                                    fontFamily = FontFamily.Default,
                                     color = MaterialTheme.colorScheme.primary.copy(alpha = floatAnimateState),
                                 ),
                                 modifier = Modifier.padding(end = 4.dp)

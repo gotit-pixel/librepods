@@ -69,7 +69,7 @@ import me.kavishdevar.librepods.data.HearingAidSettings
 import me.kavishdevar.librepods.data.parseHearingAidSettingsResponse
 import me.kavishdevar.librepods.data.sendHearingAidSettings
 import me.kavishdevar.librepods.presentation.theme.DesignSystem
-import me.kavishdevar.librepods.presentation.theme.LibrePodsTheme
+import me.kavishdevar.librepods.presentation.theme.NimblePodsTheme
 import me.kavishdevar.librepods.presentation.theme.LocalDesignSystem
 import me.kavishdevar.librepods.presentation.viewmodel.AirPodsUiState
 import me.kavishdevar.librepods.presentation.viewmodel.AirPodsViewModel
@@ -261,10 +261,10 @@ fun UpdateHearingTestScreen(
                             Log.d(TAG, "Left EQ updated at index $index to $parsed")
                         }
                     },
-//                        label = { Text("Value", fontSize = 14.sp, fontFamily = FontFamily(Font(R.font.sf_pro))) },
+//                        label = { Text("Value", fontSize = 14.sp, fontFamily = FontFamily.Default) },
                     keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Decimal),
                     textStyle = TextStyle(
-                        fontFamily = FontFamily(Font(R.font.sf_pro)),
+                        fontFamily = FontFamily.Default,
                         fontSize = 14.sp
                     ),
                     modifier = Modifier.weight(1f)
@@ -280,10 +280,10 @@ fun UpdateHearingTestScreen(
                             Log.d(TAG, "Right EQ updated at index $index to $parsed")
                         }
                     },
-//                        label = { Text("Value", fontSize = 14.sp, fontFamily = FontFamily(Font(R.font.sf_pro))) },
+//                        label = { Text("Value", fontSize = 14.sp, fontFamily = FontFamily.Default) },
                     keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Decimal),
                     textStyle = TextStyle(
-                        fontFamily = FontFamily(Font(R.font.sf_pro)),
+                        fontFamily = FontFamily.Default,
                         fontSize = 14.sp
                     ),
                     modifier = Modifier.weight(1f)
@@ -297,7 +297,7 @@ fun UpdateHearingTestScreen(
 @Preview(name = "Apple")
 @Composable
 fun UpdateHearingTestScreenPreviewApple() {
-    LibrePodsTheme(
+    NimblePodsTheme(
         m3eEnabled = false
     ) {
         Box (
@@ -314,7 +314,7 @@ fun UpdateHearingTestScreenPreviewApple() {
 @Preview(name = "Material")
 @Composable
 fun UpdateHearingTestScreenPreviewMaterial() {
-    LibrePodsTheme(
+    NimblePodsTheme(
         m3eEnabled = true
     ) {
         Box (

@@ -63,7 +63,7 @@ import androidx.compose.ui.unit.sp
 import kotlinx.coroutines.launch
 import me.kavishdevar.librepods.R
 import me.kavishdevar.librepods.presentation.theme.DesignSystem
-import me.kavishdevar.librepods.presentation.theme.LibrePodsTheme
+import me.kavishdevar.librepods.presentation.theme.NimblePodsTheme
 import me.kavishdevar.librepods.presentation.theme.LocalDesignSystem
 import me.kavishdevar.librepods.presentation.theme.sectionHeader
 import kotlin.io.encoding.ExperimentalEncodingApi
@@ -131,7 +131,7 @@ fun StyledToggle(
                 text = description, style = TextStyle(
                     fontSize = 12.sp,
                     color = MaterialTheme.colorScheme.onBackground.copy(0.6f),
-                    fontFamily = FontFamily(Font(R.font.sf_pro)),
+                    fontFamily = FontFamily.Default,
                 ), modifier = Modifier.padding(horizontal = 16.dp)
             )
         }
@@ -330,7 +330,7 @@ private fun StyledToggleContent(
 @Composable
 fun StyledToggleAppleListPreview() {
     val checked = remember { mutableStateOf(false) }
-    LibrePodsTheme(m3eEnabled = false) {
+    NimblePodsTheme(m3eEnabled = false) {
         StyledList {
             StyledToggle(
                 label = "Apple Styled List",
@@ -346,7 +346,7 @@ fun StyledToggleAppleListPreview() {
 @Composable
 fun StyledToggleApplePreview() {
     val checked = remember { mutableStateOf(false) }
-    LibrePodsTheme(m3eEnabled = false) {
+    NimblePodsTheme(m3eEnabled = false) {
         StyledToggle(
             label = "Apple",
             description = "This is an example description for the styled toggle.",
@@ -360,7 +360,7 @@ fun StyledToggleApplePreview() {
 @Composable
 fun StyledToggleM3EListPreview() {
     val checked = remember { mutableStateOf(false) }
-    LibrePodsTheme(m3eEnabled = true) {
+    NimblePodsTheme(m3eEnabled = true) {
         StyledList {
             StyledToggle(
                 label = "Apple Styled List",
@@ -376,7 +376,7 @@ fun StyledToggleM3EListPreview() {
 @Composable
 fun StyledToggleM3EPreview() {
     val checked = remember { mutableStateOf(false) }
-    LibrePodsTheme(m3eEnabled = true) {
+    NimblePodsTheme(m3eEnabled = true) {
         StyledToggle(
             label = "Material",
             description = "This is an example description for the styled toggle.",

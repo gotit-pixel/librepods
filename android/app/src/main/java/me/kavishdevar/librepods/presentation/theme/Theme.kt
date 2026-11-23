@@ -34,34 +34,34 @@ import androidx.compose.ui.platform.LocalContext
 val ColorScheme.sectionHeader: Color
     get() = onBackground.copy(alpha = 0.6f)
 
-private val AppleDarkColorScheme = darkColorScheme(
-    surfaceContainer = Color(0xFF000000), // for some reason background is not used as the background in gmail and settings app, but surfacecontainer, so using that
-    onBackground = Color(0xFFFFFFFF),
-    surface = Color(0xFF1C1C1E),
-    onSurface = Color(0xFFFFFFFF),
-    surfaceDim = Color(0x40888888),
-    primary = Color(0xFF0091FF),
-    secondaryContainer = Color(0xFF366AA8),
-    onSecondaryContainer = Color(0xFF0091FF),
-    onPrimary = Color(0xFFFFFFFF)
+private val ClassicDarkColorScheme = darkColorScheme(
+    surfaceContainer = Color(0xFF10191F),
+    onBackground = Color(0xFFF2F7F8),
+    surface = Color(0xFF18242B),
+    onSurface = Color(0xFFF2F7F8),
+    surfaceDim = Color(0x663B535A),
+    primary = Color(0xFF82E5D5),
+    secondaryContainer = Color(0xFF23464B),
+    onSecondaryContainer = Color(0xFFB5F2E9),
+    onPrimary = Color(0xFF052722)
 )
 
-private val AppleLightColorScheme = lightColorScheme(
-    surfaceContainer = Color(0xFFF2F2F7),
-    onBackground = Color(0xFF000000),
+private val ClassicLightColorScheme = lightColorScheme(
+    surfaceContainer = Color(0xFFF0F6F5),
+    onBackground = Color(0xFF142321),
     surface = Color(0xFFFFFFFF),
-    onSurface = Color(0xFF000000),
-    surfaceDim = Color(0x40D9D9D9),
-    secondaryContainer = Color(0xFF6BC0FF),
-    onSecondaryContainer = Color(0xFF0088FF),
-    primary = Color(0xFF0088FF),
+    onSurface = Color(0xFF142321),
+    surfaceDim = Color(0x405A7772),
+    secondaryContainer = Color(0xFFBFECE5),
+    onSecondaryContainer = Color(0xFF07574E),
+    primary = Color(0xFF006B60),
     onPrimary = Color(0xFFFFFFFF)
 )
 
 @Composable
-fun LibrePodsTheme(
+fun NimblePodsTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
-    m3eEnabled: Boolean = false,
+    m3eEnabled: Boolean = true,
     content: @Composable () -> Unit
 ) {
     val colorScheme = when {
@@ -69,19 +69,19 @@ fun LibrePodsTheme(
             val context = LocalContext.current
             if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
         }
-        darkTheme -> AppleDarkColorScheme
-        else -> AppleLightColorScheme
+        darkTheme -> ClassicDarkColorScheme
+        else -> ClassicLightColorScheme
     }
 
     CompositionLocalProvider(
         LocalDesignSystem provides
             if (m3eEnabled) DesignSystem.Material
-            else DesignSystem.Apple
+            else DesignSystem.Classic
     ) {
         MaterialExpressiveTheme(
             colorScheme = colorScheme,
             motionScheme = MotionScheme.expressive(),
-            typography = if (m3eEnabled) MaterialTypography else AppleTypography,
+            typography = if (m3eEnabled) MaterialTypography else ClassicTypography,
             content = content
         )
     }

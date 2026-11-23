@@ -21,7 +21,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.tooling.preview.Wallpapers.GREEN_DOMINATED_EXAMPLE
 import androidx.compose.ui.unit.dp
 import me.kavishdevar.librepods.presentation.theme.DesignSystem
-import me.kavishdevar.librepods.presentation.theme.LibrePodsTheme
+import me.kavishdevar.librepods.presentation.theme.NimblePodsTheme
 import me.kavishdevar.librepods.presentation.theme.LocalDesignSystem
 import me.kavishdevar.librepods.presentation.theme.sectionHeader
 
@@ -98,7 +98,7 @@ class StyledListScope {
 @Preview(showBackground = true, wallpaper = GREEN_DOMINATED_EXAMPLE, uiMode = UI_MODE_NIGHT_YES)
 @Composable
 fun StyledListDemo() {
-    LibrePodsTheme(
+    NimblePodsTheme(
         m3eEnabled = true
     ) {
         val backgroundC = MaterialTheme.colorScheme.background

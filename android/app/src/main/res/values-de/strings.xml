@@ -179,7 +179,7 @@
     <string name="custom_camera_package">Eigene Kamera-App-ID</string>
     <string name="custom_camera_package_set_success">Eigene Kamera-App-ID erfolgreich festgelegt</string>
     <string name="app_listener_service_label">Kamera-Listener</string>
-    <string name="app_listener_service_description">Listener-Dienst für LibrePods, um zu erkennen, wann die Kamera aktiv ist und damit die Kamerasteuerung über die AirPods zu aktivieren.</string>
+    <string name="app_listener_service_description">Listener-Dienst für NimblePods, um zu erkennen, wann die Kamera aktiv ist und damit die Kamerasteuerung über die AirPods zu aktivieren.</string>
     <string name="open_source_licenses">Open-Source-Lizenzen</string>
     <string name="hearing_test">Hörtest aktualisieren</string>
     <string name="update_hearing_test">Ergebnis des Hörtests aktualisieren</string>
@@ -221,7 +221,7 @@
     <string name="automatic_connection_description">Automatische Verbindung mit AirPods aktivieren und anpassen.</string>
     <string name="customizations_description">Zugriff auf App-Anpassungen, darunter Telefonakku im Widget, Lautstärke der Sprecherkennung und viele weitere kommende Anpassungsfunktionen.</string>
     <string name="support_the_development">Entwicklung unterstützen</string>
-    <string name="support_development_description">LibrePods wird von einem einzelnen Entwickler entwickelt. Ein Upgrade hilft, die App am Leben zu halten.</string>
+    <string name="support_development_description">NimblePods wird von einem einzelnen Entwickler entwickelt. Ein Upgrade hilft, die App am Leben zu halten.</string>
     <string name="feature_availability_disclaimer">Die Verfügbarkeit von Funktionen hängt vom AirPods-Modell und der Firmware-Version ab.</string>
     <string name="contact">Kontakt</string>
     <string name="email">E-Mail</string>

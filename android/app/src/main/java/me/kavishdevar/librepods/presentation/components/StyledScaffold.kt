@@ -160,7 +160,7 @@ fun StyledScaffold(
                 }
             }
         }
-        DesignSystem.Apple -> {
+        DesignSystem.Classic -> {
             Scaffold(
                 containerColor = MaterialTheme.colorScheme.surfaceContainer,
                 snackbarHost = { SnackbarHost(snackbarHostState) },
@@ -249,7 +249,7 @@ fun StyledScaffold(
                                             fontSize = 20.sp,
                                             fontWeight = FontWeight.SemiBold,
                                             color = if (isDarkTheme) Color.White else Color.Black,
-                                            fontFamily = FontFamily(Font(R.font.sf_pro))
+                                            fontFamily = FontFamily.Default
                                         ),
                                         modifier = Modifier.fillMaxWidth(),
                                         textAlign = TextAlign.Center

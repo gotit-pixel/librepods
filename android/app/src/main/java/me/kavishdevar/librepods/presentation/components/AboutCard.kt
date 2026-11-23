@@ -38,7 +38,7 @@ fun AboutCard(
     navigateToVersion: () -> Unit
 ) {
     val serialNumbers = when (LocalDesignSystem.current) {
-        DesignSystem.Apple -> listOf(
+        DesignSystem.Classic -> listOf(
             serialNumbers[0],
             "􀀛 ${serialNumbers[1]}",
             "􀀧 ${serialNumbers[2]}"

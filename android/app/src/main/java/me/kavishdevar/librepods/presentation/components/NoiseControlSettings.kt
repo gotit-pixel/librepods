@@ -76,7 +76,7 @@ import androidx.compose.ui.zIndex
 import me.kavishdevar.librepods.R
 import me.kavishdevar.librepods.data.NoiseControlMode
 import me.kavishdevar.librepods.presentation.theme.DesignSystem
-import me.kavishdevar.librepods.presentation.theme.LibrePodsTheme
+import me.kavishdevar.librepods.presentation.theme.NimblePodsTheme
 import me.kavishdevar.librepods.presentation.theme.LocalDesignSystem
 import me.kavishdevar.librepods.presentation.theme.sectionHeader
 import kotlin.io.encoding.ExperimentalEncodingApi
@@ -186,7 +186,7 @@ fun NoiseControlSettings(
             }
         }
 
-        DesignSystem.Apple -> {
+        DesignSystem.Classic -> {
             val isDarkTheme = isSystemInDarkTheme()
             val backgroundColor = if (isDarkTheme) Color(0xFF1C1C1E) else Color(0xFFE3E3E8)
             val textColor = if (isDarkTheme) Color.White else Color.Black
@@ -505,7 +505,7 @@ fun NoiseControlSettings(
 @Preview
 @Composable
 fun NoiseControlSettingsPreview() {
-    LibrePodsTheme(
+    NimblePodsTheme(
         m3eEnabled = true
     ) {
         Box(

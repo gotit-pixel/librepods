@@ -42,46 +42,46 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import me.kavishdevar.librepods.R
 
-val sfProFamily = FontFamily(Font(R.font.sf_pro))
+val SystemFontFamily = FontFamily.Default
 
-val AppleTypography = Typography().run {
+val ClassicTypography = Typography().run {
     copy(
-        displayLarge = displayLarge.copy(fontFamily = sfProFamily),
-        displayMedium = displayMedium.copy(fontFamily = sfProFamily),
-        displaySmall = displaySmall.copy(fontFamily = sfProFamily),
+        displayLarge = displayLarge.copy(fontFamily = SystemFontFamily),
+        displayMedium = displayMedium.copy(fontFamily = SystemFontFamily),
+        displaySmall = displaySmall.copy(fontFamily = SystemFontFamily),
 
-        headlineLarge = headlineLarge.copy(fontFamily = sfProFamily),
-        headlineMedium = headlineMedium.copy(fontFamily = sfProFamily),
-        headlineSmall = headlineSmall.copy(fontFamily = sfProFamily),
+        headlineLarge = headlineLarge.copy(fontFamily = SystemFontFamily),
+        headlineMedium = headlineMedium.copy(fontFamily = SystemFontFamily),
+        headlineSmall = headlineSmall.copy(fontFamily = SystemFontFamily),
 
-        titleLarge = titleLarge.copy(fontFamily = sfProFamily),
-        titleMedium = titleMedium.copy(fontFamily = sfProFamily),
-        titleSmall = titleSmall.copy(fontFamily = sfProFamily),
+        titleLarge = titleLarge.copy(fontFamily = SystemFontFamily),
+        titleMedium = titleMedium.copy(fontFamily = SystemFontFamily),
+        titleSmall = titleSmall.copy(fontFamily = SystemFontFamily),
 
-        bodyLarge = bodyLarge.copy(fontFamily = sfProFamily),
+        bodyLarge = bodyLarge.copy(fontFamily = SystemFontFamily),
         bodyMedium = bodyMedium.copy(
-            fontFamily = sfProFamily,
+            fontFamily = SystemFontFamily,
             fontSize = 16.sp
         ),
         bodySmall = bodySmall.copy(
-            fontFamily = sfProFamily,
+            fontFamily = SystemFontFamily,
             fontSize = 14.sp,
             lineHeight = 18.sp
         ),
 
-        labelLarge = labelLarge.copy(fontFamily = sfProFamily),
+        labelLarge = labelLarge.copy(fontFamily = SystemFontFamily),
 
         labelMedium = labelMedium.copy(
-            fontFamily = sfProFamily,
+            fontFamily = SystemFontFamily,
             fontSize = 16.sp,
         ),
         labelMediumEmphasized = labelMediumEmphasized.copy(
-            fontFamily = sfProFamily,
+            fontFamily = SystemFontFamily,
             fontSize = 16.sp,
             fontWeight = FontWeight.Bold
         ),
         labelSmallEmphasized = labelSmallEmphasized.copy(
-            fontFamily = sfProFamily,
+            fontFamily = SystemFontFamily,
             fontSize = 14.sp,
             fontWeight = FontWeight.Bold
         )
@@ -308,7 +308,7 @@ val MaterialTypography = Typography().run {
 )
 @Composable
 private fun TypographyPreview() {
-    LibrePodsTheme (m3eEnabled = true) {
+    NimblePodsTheme (m3eEnabled = true) {
         Box(
             modifier = Modifier
                 .fillMaxSize()

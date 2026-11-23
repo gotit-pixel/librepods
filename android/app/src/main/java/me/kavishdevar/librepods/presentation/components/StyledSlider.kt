@@ -96,7 +96,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import me.kavishdevar.librepods.R
 import me.kavishdevar.librepods.presentation.theme.DesignSystem
-import me.kavishdevar.librepods.presentation.theme.LibrePodsTheme
+import me.kavishdevar.librepods.presentation.theme.NimblePodsTheme
 import me.kavishdevar.librepods.presentation.theme.LocalDesignSystem
 import me.kavishdevar.librepods.utils.inspectDragGestures
 import kotlin.math.abs
@@ -318,7 +318,7 @@ fun StyledSlider(
                             ) {
 
                                 startIcon?.let {
-                                    Text(it, fontFamily = FontFamily(Font(R.font.sf_pro)))
+                                    Text(it, fontFamily = FontFamily.Default)
                                     Spacer(Modifier.width(12.dp))
                                 }
 
@@ -345,7 +345,7 @@ fun StyledSlider(
 
                                 endIcon?.let {
                                     Spacer(Modifier.width(12.dp))
-                                    Text(it, fontFamily = FontFamily(Font(R.font.sf_pro)))
+                                    Text(it, fontFamily = FontFamily.Default)
                                 }
                             }
                         }
@@ -360,7 +360,7 @@ fun StyledSlider(
             }
         }
 
-        DesignSystem.Apple -> {
+        DesignSystem.Classic -> {
             val backgroundColor =
                 if (isSystemInDarkTheme()) Color(0xFF1C1C1E) else Color(0xFFFFFFFF)
             val isDarkTheme = isSystemInDarkTheme()
@@ -422,7 +422,7 @@ fun StyledSlider(
                                             fontSize = 16.sp,
                                             fontWeight = FontWeight.Normal,
                                             color = labelTextColor,
-                                            fontFamily = FontFamily(Font(R.font.sf_pro))
+                                            fontFamily = FontFamily.Default
                                         )
                                     )
                                     Text(
@@ -431,7 +431,7 @@ fun StyledSlider(
                                             fontSize = 16.sp,
                                             fontWeight = FontWeight.Normal,
                                             color = labelTextColor,
-                                            fontFamily = FontFamily(Font(R.font.sf_pro))
+                                            fontFamily = FontFamily.Default
                                         )
                                     )
                                 }
@@ -458,7 +458,7 @@ fun StyledSlider(
                                                 fontSize = 18.sp,
                                                 fontWeight = FontWeight.Normal,
                                                 color = accentColor,
-                                                fontFamily = FontFamily(Font(R.font.sf_pro))
+                                                fontFamily = FontFamily.Default
                                             ),
                                             modifier = Modifier
                                                 .padding(horizontal = 12.dp)
@@ -510,7 +510,7 @@ fun StyledSlider(
                                                 fontSize = 18.sp,
                                                 fontWeight = FontWeight.Normal,
                                                 color = accentColor,
-                                                fontFamily = FontFamily(Font(R.font.sf_pro))
+                                                fontFamily = FontFamily.Default
                                             ),
                                             modifier = Modifier
                                                 .padding(horizontal = 12.dp)
@@ -708,7 +708,7 @@ fun StyledSlider(
                                 fontSize = 14.sp,
                                 fontWeight = FontWeight.Bold,
                                 color = labelTextColor.copy(alpha = 0.6f),
-                                fontFamily = FontFamily(Font(R.font.sf_pro))
+                                fontFamily = FontFamily.Default
                             ),
                             modifier = Modifier.padding(horizontal = 18.dp, vertical = 4.dp)
                         )
@@ -734,7 +734,7 @@ fun StyledSlider(
                                 color = (if (isSystemInDarkTheme()) Color.White else Color.Black).copy(
                                     alpha = 0.6f
                                 ),
-                                fontFamily = FontFamily(Font(R.font.sf_pro))
+                                fontFamily = FontFamily.Default
                             ),
                             modifier = Modifier
                                 .padding(horizontal = 18.dp, vertical = 4.dp)
@@ -765,7 +765,7 @@ private fun snapIfClose(value: Float, points: List<Float>, threshold: Float = 0.
 @Composable
 fun StyledSliderPreview() {
     val a = remember { mutableFloatStateOf(0.5f) }
-    LibrePodsTheme(
+    NimblePodsTheme(
         m3eEnabled = true
     ) {
         StyledScaffold(

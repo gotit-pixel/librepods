@@ -94,7 +94,7 @@ import me.kavishdevar.librepods.presentation.components.StyledButton
 import me.kavishdevar.librepods.presentation.components.StyledList
 import me.kavishdevar.librepods.presentation.components.StyledListItem
 import me.kavishdevar.librepods.presentation.theme.DesignSystem
-import me.kavishdevar.librepods.presentation.theme.LibrePodsTheme
+import me.kavishdevar.librepods.presentation.theme.NimblePodsTheme
 import me.kavishdevar.librepods.presentation.theme.LocalDesignSystem
 import me.kavishdevar.librepods.presentation.viewmodel.AirPodsUiState
 import me.kavishdevar.librepods.presentation.viewmodel.AirPodsViewModel
@@ -283,7 +283,7 @@ fun EqualizerCard(
             //                            text = "Written into Changes",
             //                            style = TextStyle(
             //                                fontSize = 16.sp,
-            //                                fontFamily = FontFamily(Font(R.font.sf_pro)),
+            //                                fontFamily = FontFamily.Default,
             //                                fontWeight = FontWeight.Bold,
             //                                color = if (isSystemInDarkTheme()) Color.White else Color.Black
             //                            )
@@ -293,7 +293,7 @@ fun EqualizerCard(
             //                            text = "Avalon Emerson",
             //                            style = TextStyle(
             //                                fontSize = 14.sp,
-            //                                fontFamily = FontFamily(Font(R.font.sf_pro)),
+            //                                fontFamily = FontFamily.Default,
             //                                fontWeight = FontWeight.Normal,
             //                                color = if (isSystemInDarkTheme()) Color.White else Color.Black
             //                            )
@@ -320,7 +320,7 @@ fun EqualizerCard(
             //                                text = if (p) "􀊄" else "􀊆",
             //                                style = TextStyle(
             //                                    fontSize = 24.sp,
-            //                                    fontFamily = FontFamily(Font(R.font.sf_pro)),
+            //                                    fontFamily = FontFamily.Default,
             //                                    fontWeight = FontWeight.Normal,
             //                                    color = Color(0xFF0091FF),
             //                                    textAlign = TextAlign.Center
@@ -544,7 +544,7 @@ fun EqualizerCard(
                                 text = stringResource(R.string.eq_low).uppercase(),
                                 style = TextStyle(
                                     fontSize = 14.sp,
-                                    fontFamily = FontFamily(Font(R.font.sf_pro)),
+                                    fontFamily = FontFamily.Default,
                                     fontWeight = FontWeight.Bold,
                                     color = (if (isSystemInDarkTheme()) Color.White else Color.Black).copy(
                                         0.2f
@@ -561,7 +561,7 @@ fun EqualizerCard(
                                 text = stringResource(R.string.eq_mid).uppercase(),
                                 style = TextStyle(
                                     fontSize = 14.sp,
-                                    fontFamily = FontFamily(Font(R.font.sf_pro)),
+                                    fontFamily = FontFamily.Default,
                                     fontWeight = FontWeight.Bold,
                                     color = (if (isSystemInDarkTheme()) Color.White else Color.Black).copy(
                                         0.2f
@@ -578,7 +578,7 @@ fun EqualizerCard(
                                 text = stringResource(R.string.eq_high).uppercase(),
                                 style = TextStyle(
                                     fontSize = 14.sp,
-                                    fontFamily = FontFamily(Font(R.font.sf_pro)),
+                                    fontFamily = FontFamily.Default,
                                     fontWeight = FontWeight.Bold,
                                     color = (if (isSystemInDarkTheme()) Color.White else Color.Black).copy(
                                         0.2f
@@ -725,7 +725,7 @@ fun EqualizerCard(
 @Preview(name = "Apple")
 @Composable
 fun EqualizerScreenPreviewApple() {
-    LibrePodsTheme(
+    NimblePodsTheme(
         m3eEnabled = false
     ) {
         Box (
@@ -743,7 +743,7 @@ fun EqualizerScreenPreviewApple() {
 @Preview(name = "Material")
 @Composable
 fun EqualizerScreenPreviewMaterial() {
-    LibrePodsTheme(
+    NimblePodsTheme(
         m3eEnabled = true
     ) {
         val state = remember { mutableStateOf(demoState) }

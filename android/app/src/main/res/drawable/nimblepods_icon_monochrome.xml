@@ -1,0 +1,9 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <path
+        android:fillColor="@color/nimblepods_icon_monochrome"
+        android:pathData="M29,74 L29,36 C29,31 34,29 38,33 L70,65 L70,36 C70,31 78,31 78,36 L78,73 C78,78 73,79 69,75 L37,44 L37,74 C37,80 29,80 29,74 Z" />
+</vector>

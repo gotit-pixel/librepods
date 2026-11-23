@@ -80,7 +80,7 @@ import me.kavishdevar.librepods.R
 import me.kavishdevar.librepods.data.updates.UpdateItem
 import me.kavishdevar.librepods.data.updates.updates
 import me.kavishdevar.librepods.presentation.theme.DesignSystem
-import me.kavishdevar.librepods.presentation.theme.LibrePodsTheme
+import me.kavishdevar.librepods.presentation.theme.NimblePodsTheme
 import me.kavishdevar.librepods.presentation.theme.LocalDesignSystem
 import kotlin.math.min
 
@@ -100,7 +100,7 @@ fun ReleaseNotesScreen(
 
     val m3eEnabled = LocalDesignSystem.current == DesignSystem.Material
 
-    LibrePodsTheme(m3eEnabled = true) {
+    NimblePodsTheme(m3eEnabled = true) {
         Column(
             modifier = Modifier
                 .fillMaxSize()
@@ -207,7 +207,7 @@ fun ReleaseNotesScreen(
                                             density = LocalDensity.current.density * 0.8f,
                                             fontScale = LocalDensity.current.fontScale
                                         ),
-                                        LocalDesignSystem provides if (m3eEnabled) DesignSystem.Material else DesignSystem.Apple
+                                        LocalDesignSystem provides if (m3eEnabled) DesignSystem.Material else DesignSystem.Classic
                                     ) {
                                         updateItem.demoComposeable()
                                     }
@@ -371,7 +371,7 @@ fun ReleaseNotesScreen(
 @Preview(uiMode = UI_MODE_NIGHT_NO, wallpaper = RED_DOMINATED_EXAMPLE, device = PIXEL_9_PRO_XL)
 @Composable
 fun ReleaseNotesScreenPreview() {
-    LibrePodsTheme(
+    NimblePodsTheme(
         m3eEnabled = false
     ) {
         ReleaseNotesScreen(

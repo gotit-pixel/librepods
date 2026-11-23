@@ -160,7 +160,7 @@ fun AppSettingsScreen(
                         val emailIntent = Intent(Intent.ACTION_SENDTO).apply {
                             data = "mailto:".toUri()
                             putExtra(Intent.EXTRA_EMAIL, arrayOf("billing@kavish.xyz"))
-                            putExtra(Intent.EXTRA_SUBJECT, "LibrePods Play billing error")
+                            putExtra(Intent.EXTRA_SUBJECT, "NimblePods billing error")
                             putExtra(
                                 Intent.EXTRA_TEXT,
                                 "Please enter your GitHub username to restore your premium access:\n\nGitHub username: "
@@ -179,7 +179,7 @@ fun AppSettingsScreen(
                         fontSize = 16.sp,
                         fontWeight = FontWeight.Bold,
                         color = Color.White,
-                        fontFamily = FontFamily(Font(R.font.sf_pro))
+                        fontFamily = FontFamily.Default
                     )
                 )
             }
@@ -454,14 +454,14 @@ fun AppSettingsScreen(
             AlertDialog(onDismissRequest = { viewModel.setShowCameraDialog(false) }, title = {
                 Text(
                     stringResource(R.string.set_custom_camera_package),
-                    fontFamily = FontFamily(Font(R.font.sf_pro)),
+                    fontFamily = FontFamily.Default,
                     fontWeight = FontWeight.Medium
                 )
             }, text = {
                 Column {
                     Text(
                         stringResource(R.string.enter_custom_camera_package),
-                        fontFamily = FontFamily(Font(R.font.sf_pro)),
+                        fontFamily = FontFamily.Default,
                         modifier = Modifier.padding(bottom = 8.dp)
                     )
 
@@ -502,7 +502,7 @@ fun AppSettingsScreen(
                     }) {
                     Text(
                         "Save",
-                        fontFamily = FontFamily(Font(R.font.sf_pro)),
+                        fontFamily = FontFamily.Default,
                         fontWeight = FontWeight.Medium
                     )
                 }
@@ -511,7 +511,7 @@ fun AppSettingsScreen(
                     onClick = { viewModel.setShowCameraDialog(false) }) {
                     Text(
                         "Cancel",
-                        fontFamily = FontFamily(Font(R.font.sf_pro)),
+                        fontFamily = FontFamily.Default,
                         fontWeight = FontWeight.Medium
                     )
                 }
@@ -548,7 +548,7 @@ fun AppSettingsScreen(
                    text = stringResource(R.string.describe_your_issue),
                    style = TextStyle(
                        fontSize = 18.sp,
-                       fontFamily = FontFamily(Font(R.font.sf_pro)),
+                       fontFamily = FontFamily.Default,
                        fontWeight = FontWeight.Bold,
                        textAlign = TextAlign.Center,
                        color = if (isSystemInDarkTheme()) Color.White else Color.Black

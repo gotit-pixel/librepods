@@ -41,7 +41,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import kotlinx.coroutines.launch
 import me.kavishdevar.librepods.R
-import me.kavishdevar.librepods.presentation.theme.LibrePodsTheme
+import me.kavishdevar.librepods.presentation.theme.NimblePodsTheme
 import me.kavishdevar.librepods.utils.XposedState
 import me.kavishdevar.librepods.utils.bypassDeviceCheck
 import me.kavishdevar.librepods.utils.isSupported
@@ -80,7 +80,7 @@ fun OnboardingScreen(
         }
     }
 
-    LibrePodsTheme(
+    NimblePodsTheme(
         m3eEnabled = true
     ) {
         Column(

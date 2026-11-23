@@ -118,7 +118,7 @@ fun StyledIconButton(
                             text = icon,
                             style = TextStyle(
                                 fontSize = 20.sp,
-                                fontFamily = FontFamily(Font(R.font.sf_pro))
+                                fontFamily = FontFamily.Default
                             )
                         )
                     }
@@ -133,7 +133,7 @@ fun StyledIconButton(
                             text = icon,
                             style = TextStyle(
                                 fontSize = 20.sp,
-                                fontFamily = FontFamily(Font(R.font.sf_pro))
+                                fontFamily = FontFamily.Default
                             )
                         )
                     }
@@ -148,7 +148,7 @@ fun StyledIconButton(
                             text = icon,
                             style = TextStyle(
                                 fontSize = 20.sp,
-                                fontFamily = FontFamily(Font(R.font.sf_pro))
+                                fontFamily = FontFamily.Default
                             )
                         )
                     }
@@ -163,14 +163,14 @@ fun StyledIconButton(
                             text = icon,
                             style = TextStyle(
                                 fontSize = 20.sp,
-                                fontFamily = FontFamily(Font(R.font.sf_pro))
+                                fontFamily = FontFamily.Default
                             )
                         )
                     }
                 }
             }
         }
-        DesignSystem.Apple -> {
+        DesignSystem.Classic -> {
             val haptics = LocalHapticFeedback.current
             val darkMode = isSystemInDarkTheme()
             val scope = rememberCoroutineScope()
@@ -410,7 +410,7 @@ half4 main(float2 coord) {
                         fontSize = 20.sp,
                         fontWeight = FontWeight.Normal,
                         color = if (iconTint.isSpecified) iconTint else if (darkMode) Color.White else Color.Black,
-                        fontFamily = FontFamily(Font(R.font.sf_pro))
+                        fontFamily = FontFamily.Default
                     )
                 )
             }

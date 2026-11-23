@@ -53,7 +53,7 @@ import dev.chrisbanes.haze.materials.ExperimentalHazeMaterialsApi
 import me.kavishdevar.librepods.data.AirPodsNotifications
 import me.kavishdevar.librepods.data.ControlCommandRepository
 import me.kavishdevar.librepods.presentation.navigation.NavigationRoot
-import me.kavishdevar.librepods.presentation.theme.LibrePodsTheme
+import me.kavishdevar.librepods.presentation.theme.NimblePodsTheme
 import me.kavishdevar.librepods.presentation.viewmodel.AirPodsViewModel
 import me.kavishdevar.librepods.services.AirPodsService
 import me.kavishdevar.librepods.utils.XposedState
@@ -95,7 +95,7 @@ class MainActivity : ComponentActivity() {
                     sharedPreferences.unregisterOnSharedPreferenceChangeListener(sharedPreferenceChangeListener)
                 }
             }
-            LibrePodsTheme(
+            NimblePodsTheme(
                 m3eEnabled = m3eEnabled.value
             ) {
 //                For demo screenshots

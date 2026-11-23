@@ -11,4 +11,7 @@
     <color name="light_blue_600">#FF039BE5</color>
     <color name="light_blue_900">#FF01579B</color>
     <color name="colorBackground">#FFFFFF</color>
+    <color name="nimblepods_icon_background">#FF0D1A20</color>
+    <color name="nimblepods_icon_foreground">#FF8BE8D7</color>
+    <color name="nimblepods_icon_monochrome">#FFFFFFFF</color>
 </resources>

@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
-    <string name="app_name" translatable="false">LibrePods</string>
-    <string name="app_description">AirPodsをAppleのエコシステムから解放します。</string>
+    <string name="app_name" translatable="false">NimblePods</string>
+    <string name="app_description">AndroidでAirPodsの機能を便利に管理します。</string>
     <string name="app_widget_description">ホーム画面から直接AirPodsのバッテリー状況を確認できます！</string>
     <string name="accessibility">アクセシビリティ</string>
     <string name="tone_volume">トーン音量</string>
@@ -185,7 +185,7 @@
     <string name="custom_camera_package">カスタムカメラのパッケージ名</string>
     <string name="custom_camera_package_set_success">カスタムカメラのパッケージ名を正常に設定しました</string>
     <string name="app_listener_service_label">カメラリスナー</string>
-    <string name="app_listener_service_description">カメラの起動を検出してAirPodsのカメラコントロールを有効にするためのLibrePodsのリスナーサービスです。</string>
+    <string name="app_listener_service_description">カメラの起動を検出してAirPodsのカメラコントロールを有効にするためのNimblePodsのリスナーサービスです。</string>
     <string name="open_source_licenses">オープンソースライセンス</string>
     <string name="hearing_test">ヒアリングチェックを更新</string>
     <string name="update_hearing_test">ヒアリングチェックの結果を更新</string>
@@ -227,7 +227,7 @@
     <string name="automatic_connection_description">AirPodsへの自動接続を有効化およびカスタマイズします。</string>
     <string name="customizations_description">ウィジェット内のスマートフォンバッテリー表示、会話感知の音量調整、今後追加される機能など、アプリのカスタマイズ機能にアクセスできます。</string>
     <string name="support_the_development">開発を支援する</string>
-    <string name="support_development_description">LibrePodsは個人開発者によって開発されています。アップグレードすることでアプリの継続的な開発を支援できます。</string>
+    <string name="support_development_description">NimblePodsは個人開発者によって開発されています。アップグレードすることでアプリの継続的な開発を支援できます。</string>
     <string name="feature_availability_disclaimer">利用できる機能は、お使いのAirPodsのモデルおよびファームウェアのバージョンによって異なります。</string>
     <string name="contact">お問い合わせ</string>
     <string name="email">メール</string>
@@ -264,14 +264,14 @@
     <string name="describe_your_issue">問題の詳細を入力してください</string>
     <string name="optimized_charging">最適化された充電上限</string>
     <string name="optimized_charging_description">AirPodsが毎日の使用状況を学習し、最適化された上限まで充電するタイミングと、フル充電を許可するタイミングを判断します。この上限は日々の使用状況に適応し、長期的にバッテリーの寿命を延ばします。\n非対応のAirPodsや古いファームウェアバージョンのAirPodsでは、この設定が反映されない場合があります。</string>
-    <string name="enable_app_in_xposed_or_update_device">続行するには、デバイスをアップデートするか、XposedでLibrePodsを有効にしてからアプリを開き直してください。</string>
+    <string name="enable_app_in_xposed_or_update_device">続行するには、デバイスをアップデートするか、XposedでNimblePodsを有効にしてからアプリを開き直してください。</string>
     <string name="play_foss_premium_banner">アプリがGoogle Play版に更新されたため、高度な機能は%1$d日後に無効になります。FOSS版を使い続けるには元の入手先から更新してください。期間終了後にアップグレードを直接購入するか、すでにプロジェクトを支援されている場合はこちらをタップしてプロモーションコードをリクエストしてください。</string>
     <string name="custom">カスタム</string>
     <string name="recommended">推奨</string>
     <string name="appearance">外観</string>
     <string name="use_material3e">Material 3 Expressiveを使用</string>
     <string name="material3e">Material 3 Expressive</string>
-    <string name="update_m3e_description">LibrePodsは、刷新されたタイポグラフィやアダプティブカラースキームを含む、Material 3 Expressiveに基づいた新しいデザインに対応しました。\nアプリの設定からいつでもAppleスタイルの外観に戻すことができます。</string>
+    <string name="update_m3e_description">NimblePodsは、刷新されたタイポグラフィやアダプティブカラースキームを含む、Material 3 Expressiveに基づいた新しいデザインに対応しました。\nアプリの設定からクラシックな外観に切り替えられます。</string>
     <string name="update_equalizer_description">最新のAirPodsベータ版ファームウェアでのみ利用可能です。ベータ版ファームウェアをインストールするには、OSバージョン27を実行しているAppleデバイスが必要です。</string>
     <string name="what_s_new">新機能</string>
     <string name="reconnecting">再接続中</string>
@@ -281,7 +281,7 @@
     <string name="i_agree">同意する</string>
     <string name="compatibility_check_bypassed">互換性チェックがスキップされました。お使いのデバイスに互換性があることを確認しましたか？</string>
     <string name="not_compatible_update">お使いのデバイスは現在互換性がありません。続行するにはデバイスをアップデートしてください。</string>
-    <string name="not_compatitble_description">Androidの制限により、LibrePodsを使用するにはより新しいバージョンのAndroidが必要です。
+    <string name="not_compatitble_description">Androidの制限により、NimblePodsを使用するにはより新しいバージョンのAndroidが必要です。
         \n• Google Pixelデバイス: Android 16（3月のアップデート以降）および最新のGoogle Playシステムアップデートが必要
         \n• OnePlusおよびOppoデバイス: Android 16が必要
         \n• その他のすべてのデバイス: Android 17（OneUI 9、MagicOS 11、Nothing OS 5.0など）が必要
