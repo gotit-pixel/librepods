@@ -426,7 +426,7 @@ NativeOnModuleLoaded native_init(const NativeAPIEntries *entries) {
 }
 
 extern "C" JNIEXPORT void JNICALL
-Java_me_kavishdevar_librepods_utils_NativeBridge_setSdpHook(JNIEnv *, jobject thiz,
+Java_in_org_gotit_nimblepods_utils_NativeBridge_setSdpHook(JNIEnv *, jobject thiz,
                                                             jboolean enable) {
     LOGI("setSdpHook called with enable: %d", enable);
     enableSdpHook.store(enable, std::memory_order_relaxed);

@@ -1,7 +1,7 @@
-id=librepods
-name=LibrePods
+id=nimblepods
+name=NimblePods
 version=v0.2.6
 versionCode=46
-author=@kavishdevar
-description=Installs LibrePods as a system app for granting BLUETOOTH_PRIVILEGED and MODIFY_PHONE_STATE permission for better integraion with android.
-updateJson=https://raw.githubusercontent.com/kavishdevar/librepods/main/extras/update_nonpatch.json
+author=GOT IT
+description=Installs NimblePods as a privileged system app for supported Bluetooth integrations.
+updateJson=https://raw.githubusercontent.com/gotit-pixel/librepods/feature/podsphere-bootstrap/update_nonpatch.json

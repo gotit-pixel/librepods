@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=NimblePods
+Comment=Manage compatible earbuds on Linux
+Exec=nimblepods
+Icon=nimblepods
+Terminal=false
+Categories=Audio;AudioVideo;Utility;Qt;

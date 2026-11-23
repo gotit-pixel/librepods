@@ -1029,7 +1029,7 @@ int main(int argc, char *argv[]) {
 
         return 0;
     }
-    app.setDesktopFileName("me.kavishdevar.librepods");
+    app.setDesktopFileName("in.org.gotit.nimblepods");
     app.setQuitOnLastWindowClosed(false);
 
     bool debugMode = false;

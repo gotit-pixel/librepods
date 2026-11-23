@@ -44,12 +44,13 @@ android {
             }
         }
     }
-    namespace = "me.kavishdevar.librepods"
+    namespace = "in.org.gotit.nimblepods"
     compileSdk = 37
 
     defaultConfig {
-        applicationId = "me.kavishdevar.librepods"
+        applicationId = "in.org.gotit.nimblepods"
         targetSdk = 37
+        minSdk = 33
         versionCode = appVersionCode
         versionName = appVersionName
     }
@@ -68,18 +69,9 @@ android {
             if (releaseSigningAvailable) {
                 signingConfig = signingConfigs.getByName("release")
             }
-            defaultConfig {
-                minSdk = 33
-            }
         }
         debug {
-            if (releaseSigningAvailable) {
-                signingConfig = signingConfigs.getByName("release")
-            }
             versionNameSuffix = "-debug"
-            defaultConfig {
-                minSdk = 33
-            }
         }
     }
     productFlavors {
@@ -91,7 +83,6 @@ android {
             dimension = "env"
             buildConfigField("Boolean", "PLAY_BUILD", "true")
             versionNameSuffix = "-play"
-            minSdk = 36
         }
     }
     compileOptions {
@@ -184,13 +175,13 @@ fun registerRootModuleZipTask(
     duplicatesStrategy = DuplicatesStrategy.WARN
 
     from(layout.buildDirectory.file(apkPath)) {
-        into("system/priv-app/LibrePods")
-        rename { "LibrePods.apk" }
+        into("system/priv-app/NimblePods")
+        rename { "NimblePods.apk" }
     }
 
     delete(layout.buildDirectory.dir("outputs/rootModuleZips"))
 
-    archiveFileName.set("LibrePods-FOSS-v$appVersionName-$appVersionCode-$buildType.zip")
+    archiveFileName.set("NimblePods-FOSS-v$appVersionName-$appVersionCode-$buildType.zip")
     destinationDirectory.set(layout.buildDirectory.dir("outputs/rootModuleZips"))
 }
 
@@ -219,12 +210,12 @@ val collect = tasks.register<Copy>("collectReleaseArtifacts") {
 
     from(layout.buildDirectory.dir("outputs/apk/foss/release")) {
         include("*.apk")
-        rename(".*", "LibrePods-FOSS-v$appVersionName-$appVersionCode-release.apk")
+        rename(".*", "NimblePods-FOSS-v$appVersionName-$appVersionCode-release.apk")
     }
 
     from(layout.buildDirectory.dir("outputs/apk/foss/debug")) {
         include("*.apk")
-        rename(".*", "LibrePods-FOSS-v$appVersionName-$appVersionCode-debug.apk")
+        rename(".*", "NimblePods-FOSS-v$appVersionName-$appVersionCode-debug.apk")
     }
 
     from(layout.buildDirectory.dir("outputs/bundle/playRelease")) {

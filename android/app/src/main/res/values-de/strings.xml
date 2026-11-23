@@ -1,5 +1,5 @@
 <resources xmlns:tools="http://schemas.android.com/tools" tools:ignore="MissingTranslation">
-    <string name="app_description">Befreie deine AirPods aus Apples Ökosystem.</string>
+    <string name="app_description" translatable="false">Use compatible earbuds with Android. NimblePods is not affiliated with Apple Inc.</string>
     <string name="app_widget_description">Sieh den Akkustand deiner AirPods direkt vom Homescreen!</string>
     <string name="accessibility">Bedienungshilfen</string>
     <string name="tone_volume">Tonlautstärke</string>

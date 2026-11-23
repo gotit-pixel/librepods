@@ -1,35 +1,35 @@
-> [!WARNING]
-> librepods.org is not an official website of the LibrePods project. It inaccurately claims to be the official website of the project by claiming copyrights and using the LibrePods logo in the footer. And at the same time, they say that the project is not affiliated with the LibrePods project or its developers.
-> 
-> Please report any other such websites to [me@kavish.xyz](mailto:me@kavish.xyz)
- 
+> [!NOTE]
+> NimblePods is an independent GPL-3.0-or-later fork based on LibrePods. It is not affiliated with Apple Inc.
+>
+> Support: [support@gotit.org.in](mailto:support@gotit.org.in) · [Privacy policy](https://gotit.org.in/privacy-policy/)
+
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="./imgs/banner-dark.png" />
   <source media="(prefers-color-scheme: light)" srcset="./imgs/banner.png" />
-  <img alt="LibrePods" src="./imgs/banner.png" />
+  <img alt="NimblePods" src="./imgs/banner.png" />
 </picture>
 
 <div align="center" style="margin: 20px 0px;">
-<a href="https://github.com/kavishdevar/librepods/releases/latest">
-  <img src="https://img.shields.io/github/downloads/kavishdevar/librepods/total?label=GitHub%20Downloads" />
+<a href="https://github.com/gotit-pixel/librepods/releases/latest">
+  <img src="https://img.shields.io/github/downloads/gotit-pixel/librepods/total?label=GitHub%20Downloads" />
 </a>
-<a href="https://github.com/kavishdevar/librepods/actions/workflows/ci-android.yml">
-  <img src="https://github.com/kavishdevar/librepods/actions/workflows/ci-android.yml/badge.svg" />
+<a href="https://github.com/gotit-pixel/librepods/actions/workflows/ci-android.yml">
+  <img src="https://github.com/gotit-pixel/librepods/actions/workflows/ci-android.yml/badge.svg" />
 </a>
-<a href="https://github.com/kavishdevar/librepods/actions/workflows/ci-linux-rust.yml">
-  <img src="https://github.com/kavishdevar/librepods/actions/workflows/ci-linux-rust.yml/badge.svg" />
+<a href="https://github.com/gotit-pixel/librepods/actions/workflows/ci-linux-rust.yml">
+  <img src="https://github.com/gotit-pixel/librepods/actions/workflows/ci-linux-rust.yml/badge.svg" />
 </a>
-<a href="https://github.com/kavishdevar/librepods/issues">
-  <img src="https://img.shields.io/github/issues/kavishdevar/librepods" />  
+<a href="https://github.com/gotit-pixel/librepods/issues">
+  <img src="https://img.shields.io/github/issues/gotit-pixel/librepods" />
 </a>
-<a href="https://discord.gg/HhG4ycVum4">
-  <img src="https://img.shields.io/discord/1441416992027574375?logoColor=white&color=5865F2&label=Discord" />
+<a href="https://gotit.org.in/">
+  <img src="https://img.shields.io/badge/Support-gotit.org.in-1677ff" />
 </a>
 </div>
 
-# What is LibrePods?
+# What is NimblePods?
 
-LibrePods allows you to use AirPods features that are exclusive to Apple devices. It implements the proprietary protocol used to exchange data between AirPods and Apple devices, enabling features like changing noise control modes, fast ear detection, accurate battery status, head gestures, conversational awareness, and more on non-Apple platforms.
+NimblePods allows you to use AirPods features that are exclusive to Apple devices. It implements the proprietary protocol used to exchange data between AirPods and Apple devices, enabling features like changing noise control modes, fast ear detection, accurate battery status, head gestures, conversational awareness, and more on non-Apple platforms.
 
 # Feature availability
 
@@ -73,7 +73,7 @@ The following features related to Find My are planned, but require further RE an
 
 ## Spatial Audio
 
-The app does not currently provide head tracking information to Android for the OS to perform HRTF. This has not been explored completely, and it might need root. 
+The app does not currently provide head tracking information to Android for the OS to perform HRTF. This has not been explored completely, and it might need root.
 
 Spatializing stereo sound is beyond this project's scope and will never be available. Many OEMs have an implementation of their own for this.
 
@@ -108,7 +108,7 @@ Check out [PR #655](https://github.com/librepods-org/librepods/pull/655).
 
 Turns out, if you change the VendorID in DID Profile to that of Apple, you get access to several special features!
 
-You can do this on Linux by editing the DeviceID in `/etc/bluetooth/main.conf`. Add this line to the config file `DeviceID = bluetooth:004C:0000:0000`. For android you can enable the `act as Apple device` setting in the app's settings (shown only when Xposed is available and LibrePods module is enabled).
+You can do this on Linux by editing the DeviceID in `/etc/bluetooth/main.conf`. Add this line to the config file `DeviceID = bluetooth:004C:0000:0000`. For android you can enable the `act as Apple device` setting in the app's settings (shown only when Xposed is available and NimblePods module is enabled).
 
 ## Multi-device Connectivity
 
@@ -118,19 +118,19 @@ Upto two devices can be simultaneously connected to AirPods, for audio and contr
 
 Accessibility settings like customizing transparency mode (amplification, balance, tone, conversation boost, and ambient noise reduction), and loud sound reduction can be configured.
 
-All hearing aid customizations can be done from Android (linux soon), including setting the audiogram result. The app doesn't provide a way to take a hearing test because it requires much more precision. It is much better to use an already available audiogram result. 
+All hearing aid customizations can be done from Android (linux soon), including setting the audiogram result. The app doesn't provide a way to take a hearing test because it requires much more precision. It is much better to use an already available audiogram result.
 
 # Protocol and Reverse Engineering
 
 Please refer to the Wireshark dissector plugin by Nojus ([@pabloaul](https://github.com/pabloaul)) for more information on the protocols used: [pabloaul/apple-wireshark](https://github.com/pabloaul/apple-wireshark)
 
-The dissector had not been used in LibrePods for most of the implementation; I had reverse engineered the protocol myself before this dissector was made. But many (future) features including two-way high quality audio and spatial audio would not have been possible without their RE efforts!
+The dissector had not been used in NimblePods for most of the implementation; I had reverse engineered the protocol myself before this dissector was made. But many (future) features including two-way high quality audio and spatial audio would not have been possible without their RE efforts!
 
 # Use of AI
 
 ## Android app
 
-These parts of the app were completely AI-generated: 
+These parts of the app were completely AI-generated:
 - Head Gestures - all of it, including logic and the UI
 - The offset setup with r2+the xposed module (both versions)
 - Troubleshooter and LogCollector
@@ -235,7 +235,7 @@ A huge thank you to everyone supporting the project!
 # Alternates for other platforms:
 - CAPod - A companion app for AirPods on Android. ([play store](https://play.google.com/store/apps/details?id=eu.darken.capod) | [source code](https://github.com/d4rken-org/capod)). Use this if you're using Android version 16 QPR3 or below and are not rooted.
 - MagicPods for Steam Deck ([website](https://magicpods.app/steamdeck/))
-- MagicPods - if you're looking for "LibrePods for Windows"  ([ms store](https://apps.microsoft.com/store/detail/9P6SKKFKSHKM) [installer](https://magicpods.app/installer/MagicPods.appinstaller) | [website](https://magicpods.app/))
+- MagicPods - if you're looking for "NimblePods for Windows"  ([ms store](https://apps.microsoft.com/store/detail/9P6SKKFKSHKM) [installer](https://magicpods.app/installer/MagicPods.appinstaller) | [website](https://magicpods.app/))
 
 # Star History
 
@@ -249,8 +249,8 @@ A huge thank you to everyone supporting the project!
 
 # License
 
-LibrePods - AirPods liberated from Apple’s ecosystem
-Copyright (C) 2025 LibrePods contributors
+NimblePods - AirPods liberated from Apple’s ecosystem
+Copyright (C) 2025 NimblePods contributors
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -267,10 +267,10 @@ along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 # Trademark Notice
 
-The GPL does not grant any rights to use the LibrePods name, logo, or branding. The LibrePods name and logo may not be used for software, websites, domains, products, services, or other projects in a manner that suggests affiliation with, endorsement by, or association with the official LibrePods project without prior permission.
+The GPL does not grant any rights to use the NimblePods name, logo, or branding. The NimblePods name and logo may not be used for software, websites, domains, products, services, or other projects in a manner that suggests affiliation with, endorsement by, or association with the official NimblePods project without prior permission.
 
-If you see any misuse of the LibrePods name or logo, please report it to [me@kavish.xyz](mailto:me@kavish.xyz).
+If you see any misuse of the NimblePods name or logo, please report it to [support@gotit.org.in](mailto:support@gotit.org.in).
 
 The SF Pro font used in the Android app is the property of Apple Inc.. This will be removed in future versions of the app and replaced with an open alternative soon.
 
-AirPods, AirPods Pro, AirPods Max, and the AirPods logo are trademarks of Apple Inc. The LibrePods project is not affiliated with or endorsed by Apple Inc. in any way.
+AirPods, AirPods Pro, AirPods Max, and the AirPods logo are trademarks of Apple Inc. The NimblePods project is not affiliated with or endorsed by Apple Inc. in any way.
