@@ -45,7 +45,7 @@ jobs:
       - name: Install Android SDK packages
         run: |
           sdkmanager \
-            "platforms;android-37" \
+            "platforms;android-37.0" # corrected: SDK repository exposes Android 37 as android-37.0
             "build-tools;37.0.0" \
             "ndk;30.0.14904198" \
             "cmake;3.22.1"
