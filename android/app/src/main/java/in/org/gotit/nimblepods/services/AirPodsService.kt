@@ -401,7 +401,7 @@ class AirPodsService : Service(), SharedPreferences.OnSharedPreferenceChangeList
 
         localMac = config.selfMacAddress
         if (localMac.isEmpty()) {
-            if (checkSelfPermission(Manifest.permission.LOCAL_MAC_ADDRESS) == PackageManager.PERMISSION_GRANTED) {
+            if (checkSelfPermission("android.permission.LOCAL_MAC_ADDRESS") == PackageManager.PERMISSION_GRANTED) {
                 val bluetoothManager = getSystemService(BluetoothManager::class.java)
                 val bluetoothAdapter = bluetoothManager.adapter
                 localMac = bluetoothAdapter.address
