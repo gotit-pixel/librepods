@@ -79,9 +79,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.suspendCancellableCoroutine
-import kotlinx.coroutines.withTimeout
 import `in`.org.gotit.nimblepods.BuildConfig
 import `in`.org.gotit.nimblepods.MainActivity
 import `in`.org.gotit.nimblepods.R
@@ -135,7 +133,6 @@ import java.util.concurrent.atomic.AtomicBoolean
 import java.nio.ByteOrder
 import kotlin.io.encoding.Base64
 import kotlin.io.encoding.ExperimentalEncodingApi
-import kotlin.time.Duration.Companion.milliseconds
 
 private const val TAG = "AirPodsService"
 
@@ -2680,9 +2677,7 @@ class AirPodsService : Service(), SharedPreferences.OnSharedPreferenceChangeList
         }
 
         try {
-            runBlocking {
-                withTimeout(5000.milliseconds) {
-                    try {
+            try {
                         socket.connect()
                         this@AirPodsService.device = device
                         val xposedRemotePref = XposedRemotePrefProvider.create()
@@ -2752,10 +2747,8 @@ class AirPodsService : Service(), SharedPreferences.OnSharedPreferenceChangeList
                         } else {
                             showSocketConnectionFailureNotification("Couldn't connect to socket: ${e.localizedMessage}")
                         }
-                        return@withTimeout
+                        return
 //                            throw e // lol how did i not catch this before... gonna comment this line instead of removing to preserve history
-                    }
-                }
             }
             if (!socket.isConnected) {
                 Log.d(TAG, "<LogCollector:Complete:Failed> socket not connected")
