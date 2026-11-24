@@ -56,9 +56,32 @@ jobs:
           key: ${{ github.repository }}-android-ndk
           path: /usr/local/lib/android/sdk/ndk
 
+      - name: Validate release signing secrets
+        if: github.event_name != 'pull_request'
+        env:
+          RELEASE_KEYSTORE_B64: ${{ secrets.RELEASE_KEYSTORE_FILE }}
+          RELEASE_STORE_PASSWORD: ${{ secrets.RELEASE_STORE_PASSWORD }}
+          RELEASE_KEY_ALIAS: ${{ secrets.RELEASE_KEY_ALIAS }}
+          RELEASE_KEY_PASSWORD: ${{ secrets.RELEASE_KEY_PASSWORD }}
+        run: |
+          missing=()
+          for name in RELEASE_KEYSTORE_B64 RELEASE_STORE_PASSWORD RELEASE_KEY_ALIAS RELEASE_KEY_PASSWORD; do
+            if [[ -z "${!name}" ]]; then
+              missing+=("$name")
+            fi
+          done
+          if (( ${#missing[@]} > 0 )); then
+            echo "::error::Missing required Actions secrets: ${missing[*]}"
+            exit 1
+          fi
       - name: Decode keystore
         if: github.event_name != 'pull_request'
-        run: echo "${{ secrets.RELEASE_KEYSTORE_FILE }}" | base64 --decode > android/release.keystore
+        env:
+          RELEASE_KEYSTORE_B64: ${{ secrets.RELEASE_KEYSTORE_FILE }}
+        run: |
+          printf '%s' "$RELEASE_KEYSTORE_B64" | base64 --decode > android/release.keystore
+          test -s android/release.keystore
+          chmod 600 android/release.keystore
       - name: Setup Android SDK
         uses: android-actions/setup-android@v4
         with:
@@ -75,13 +98,17 @@ jobs:
 
       - name: Create local.properties
         if: github.event_name != 'pull_request'
+        env:
+          RELEASE_STORE_PASSWORD: ${{ secrets.RELEASE_STORE_PASSWORD }}
+          RELEASE_KEY_ALIAS: ${{ secrets.RELEASE_KEY_ALIAS }}
+          RELEASE_KEY_PASSWORD: ${{ secrets.RELEASE_KEY_PASSWORD }}
         run: |
-          cat <<EOF > android/local.properties
-          RELEASE_STORE_FILE=../release.keystore
-          RELEASE_STORE_PASSWORD=${{ secrets.RELEASE_STORE_PASSWORD }}
-          RELEASE_KEY_ALIAS=${{ secrets.RELEASE_KEY_ALIAS }}
-          RELEASE_KEY_PASSWORD=${{ secrets.RELEASE_KEY_PASSWORD }}
-          EOF
+          {
+            printf 'RELEASE_STORE_FILE=release.keystore\\n'
+            printf 'RELEASE_STORE_PASSWORD=%s\\n' "$RELEASE_STORE_PASSWORD"
+            printf 'RELEASE_KEY_ALIAS=%s\\n' "$RELEASE_KEY_ALIAS"
+            printf 'RELEASE_KEY_PASSWORD=%s\\n' "$RELEASE_KEY_PASSWORD"
+          } > android/local.properties
       - name: Build debug APK for PRs
         if: github.event_name == 'pull_request'
         run: ./gradlew assembleFossDebug
@@ -303,7 +330,7 @@ jobs:
         uses: r0adkll/upload-google-play@v1
         with:
           serviceAccountJsonPlainText: ${{ secrets.PLAY_STORE_SERVICE_ACCOUNT_JSON }}
-          packageName: me.kavishdevar.librepods
+          packageName: in.org.gotit.nimblepods
           releaseFiles: artifacts/release-bundle/*.aab
           tracks: beta
           releaseName: "${VERSION_CODE} (v${APP_VERSION})"
@@ -317,7 +344,7 @@ jobs:
         uses: r0adkll/upload-google-play@v1
         with:
           serviceAccountJsonPlainText: ${{ secrets.PLAY_STORE_SERVICE_ACCOUNT_JSON }}
-          packageName: me.kavishdevar.librepods
+          packageName: in.org.gotit.nimblepods
           releaseFiles: artifacts/release-bundle/*.aab
           tracks: internal
           releaseName: "rewrite v${APP_VERSION} (${VERSION_CODE})"
