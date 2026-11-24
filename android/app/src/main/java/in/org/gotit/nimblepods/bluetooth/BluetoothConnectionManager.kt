@@ -25,7 +25,10 @@ import android.os.ParcelUuid
 import android.util.Log
 
 object BluetoothConnectionManager {
+    // Socket references are published between the BLE, AACP, ATT, and service threads.
+    @Volatile
     var aacpSocket: BluetoothSocket? = null
+    @Volatile
     var attSocket: BluetoothSocket? = null
 }
 

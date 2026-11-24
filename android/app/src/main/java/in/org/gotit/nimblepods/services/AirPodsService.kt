@@ -73,6 +73,8 @@ import androidx.core.content.edit
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.ExperimentalCoroutinesApi
+import kotlinx.coroutines.SupervisorJob
+import kotlinx.coroutines.cancel
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
@@ -160,6 +162,9 @@ object ServiceManager {
 
 // @Suppress("unused")
 class AirPodsService : Service(), SharedPreferences.OnSharedPreferenceChangeListener {
+    private val serviceScope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
+    private var showIslandReceiver: BroadcastReceiver? = null
+    private var a2dpConnectionStateReceiver: BroadcastReceiver? = null
     var macAddress = ""
     var localMac = ""
     lateinit var aacpManager: AACPManager
@@ -396,7 +401,7 @@ class AirPodsService : Service(), SharedPreferences.OnSharedPreferenceChangeList
 
         localMac = config.selfMacAddress
         if (localMac.isEmpty()) {
-            if (checkSelfPermission("android.permission.LOCAL_MAC_ADDRESS") == PackageManager.PERMISSION_GRANTED) {
+            if (checkSelfPermission(Manifest.permission.LOCAL_MAC_ADDRESS) == PackageManager.PERMISSION_GRANTED) {
                 val bluetoothManager = getSystemService(BluetoothManager::class.java)
                 val bluetoothAdapter = bluetoothManager.adapter
                 localMac = bluetoothAdapter.address
@@ -610,9 +615,7 @@ class AirPodsService : Service(), SharedPreferences.OnSharedPreferenceChangeList
                         val leAvailableForAudio =
                             bleManager.getMostRecentStatus()?.isLeftInEar == true || bleManager.getMostRecentStatus()?.isRightInEar == true
 //                        if ((CrossDevice.isAvailable && !isConnectedLocally && earDetectionNotification.status.contains(0x00)) || leAvailableForAudio) CoroutineScope(Dispatchers.IO).launch {
-                        if (leAvailableForAudio) runBlocking {
-                            takeOver("call")
-                        }
+                        if (leAvailableForAudio) serviceScope.launch { takeOver("call") }
                         if (config.headGestures) {
                             handleIncomingCall()
                         }
@@ -622,9 +625,7 @@ class AirPodsService : Service(), SharedPreferences.OnSharedPreferenceChangeList
                         val leAvailableForAudio =
                             bleManager.getMostRecentStatus()?.isLeftInEar == true || bleManager.getMostRecentStatus()?.isRightInEar == true
 //                        if ((CrossDevice.isAvailable && !isConnectedLocally && earDetectionNotification.status.contains(0x00)) || leAvailableForAudio) CoroutineScope(
-                        if (leAvailableForAudio) CoroutineScope(
-                            Dispatchers.IO
-                        ).launch {
+                        if (leAvailableForAudio) serviceScope.launch {
                             takeOver("call")
                         }
                         isInCall = true
@@ -710,7 +711,7 @@ class AirPodsService : Service(), SharedPreferences.OnSharedPreferenceChangeList
                 }
             }
         }
-        val showIslandReceiver = object : BroadcastReceiver() {
+        val receiver = object : BroadcastReceiver() {
             override fun onReceive(context: Context?, intent: Intent?) {
                 if (intent?.action == "${BuildConfig.APPLICATION_ID}.cross_device_island") {
                     showIsland(
@@ -727,9 +728,11 @@ class AirPodsService : Service(), SharedPreferences.OnSharedPreferenceChangeList
                     } catch (e: Exception) {
                         e.printStackTrace()
                     }
+                    this@AirPodsService.showIslandReceiver = null
                 }
             }
         }
+        showIslandReceiver = receiver
 
         val showIslandIntentFilter = IntentFilter().apply {
             addAction("${BuildConfig.APPLICATION_ID}.cross_device_island")
@@ -737,10 +740,10 @@ class AirPodsService : Service(), SharedPreferences.OnSharedPreferenceChangeList
         }
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            registerReceiver(showIslandReceiver, showIslandIntentFilter, RECEIVER_NOT_EXPORTED)
+            registerReceiver(receiver, showIslandIntentFilter, RECEIVER_NOT_EXPORTED)
         } else {
             @Suppress("UnspecifiedRegisterReceiverFlag") registerReceiver(
-                showIslandReceiver, showIslandIntentFilter
+                receiver, showIslandIntentFilter
             )
         }
 
@@ -1323,7 +1326,7 @@ class AirPodsService : Service(), SharedPreferences.OnSharedPreferenceChangeList
     }
 
     private fun registerA2dpConnectionReceiver() {
-        val a2dpConnectionStateReceiver = object : BroadcastReceiver() {
+        val receiver = object : BroadcastReceiver() {
             override fun onReceive(context: Context, intent: Intent) {
                 if (intent.action == "android.bluetooth.a2dp.profile.action.CONNECTION_STATE_CHANGED") {
                     val state = intent.getIntExtra(
@@ -1347,17 +1350,19 @@ class AirPodsService : Service(), SharedPreferences.OnSharedPreferenceChangeList
                         MediaController.iPausedTheMedia = false
 
                         context.unregisterReceiver(this)
+                        this@AirPodsService.a2dpConnectionStateReceiver = null
                     }
                 }
             }
         }
+        a2dpConnectionStateReceiver = receiver
 
         val a2dpIntentFilter =
             IntentFilter("android.bluetooth.a2dp.profile.action.CONNECTION_STATE_CHANGED")
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
-            registerReceiver(a2dpConnectionStateReceiver, a2dpIntentFilter, RECEIVER_EXPORTED)
+            registerReceiver(receiver, a2dpIntentFilter, RECEIVER_EXPORTED)
         } else {
-            registerReceiver(a2dpConnectionStateReceiver, a2dpIntentFilter)
+            registerReceiver(receiver, a2dpIntentFilter)
         }
     }
 
@@ -3113,6 +3118,8 @@ class AirPodsService : Service(), SharedPreferences.OnSharedPreferenceChangeList
         clearPacketLogs()
         Log.d(TAG, "Service stopped is being destroyed for some reason!")
 
+        serviceScope.cancel()
+
         sharedPreferences.unregisterOnSharedPreferenceChangeListener(this)
 
         try {
@@ -3135,6 +3142,20 @@ class AirPodsService : Service(), SharedPreferences.OnSharedPreferenceChangeList
         } catch (e: Exception) {
             e.printStackTrace()
         }
+        listOfNotNull(showIslandReceiver, a2dpConnectionStateReceiver).forEach { receiver ->
+            try {
+                unregisterReceiver(receiver)
+            } catch (e: Exception) {
+                e.printStackTrace()
+            }
+        }
+        try {
+            unregisterReceiver(BatteryChangedIntentReceiver)
+        } catch (e: Exception) {
+            e.printStackTrace()
+        }
+        showIslandReceiver = null
+        a2dpConnectionStateReceiver = null
         try {
             bleManager.stopScanning()
         } catch (e: Exception) {

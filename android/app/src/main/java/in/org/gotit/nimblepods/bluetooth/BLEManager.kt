@@ -203,10 +203,11 @@ class BLEManager(private val context: Context) {
                 mBluetoothLeScanner?.stopScan(mScanCallback)
                 mScanCallback = null
             }
-
-            cleanupHandler.removeCallbacks(cleanupRunnable)
         } catch (t: Throwable) {
             Log.e(TAG, "Error stopping BLE scanner", t)
+        } finally {
+            // Stop the recurring cleanup loop even if the platform rejects stopScan().
+            cleanupHandler.removeCallbacks(cleanupRunnable)
         }
     }
 
