@@ -131,6 +131,7 @@ import `in`.org.gotit.nimblepods.utils.SystemApisUtils.METADATA_UNTETHERED_RIGHT
 import `in`.org.gotit.nimblepods.utils.SystemApisUtils.METADATA_UNTETHERED_RIGHT_ICON
 import `in`.org.gotit.nimblepods.utils.SystemApisUtils.METADATA_UNTETHERED_RIGHT_LOW_BATTERY_THRESHOLD
 import java.nio.ByteBuffer
+import java.util.concurrent.atomic.AtomicBoolean
 import java.nio.ByteOrder
 import kotlin.io.encoding.Base64
 import kotlin.io.encoding.ExperimentalEncodingApi
@@ -163,6 +164,7 @@ object ServiceManager {
 // @Suppress("unused")
 class AirPodsService : Service(), SharedPreferences.OnSharedPreferenceChangeListener {
     private val serviceScope = CoroutineScope(SupervisorJob() + Dispatchers.IO)
+    private val socketConnectionInProgress = AtomicBoolean(false)
     private var showIslandReceiver: BroadcastReceiver? = null
     private var a2dpConnectionStateReceiver: BroadcastReceiver? = null
     var macAddress = ""
@@ -2624,8 +2626,13 @@ class AirPodsService : Service(), SharedPreferences.OnSharedPreferenceChangeList
                 // Set a temporary connecting state
 //                isConnectedLocally = false // Keep as false since we're not actually connecting to L2CAP
             } else {
-                connectToSocket(bluetoothAdapter, device!!)
-                connectAudio(this, device)
+                val targetDevice = device!!
+                serviceScope.launch {
+                    connectToSocketBlocking(bluetoothAdapter, targetDevice)
+                    if (BluetoothConnectionManager.aacpSocket?.isConnected == true) {
+                        connectAudio(this@AirPodsService, targetDevice)
+                    }
+                }
 //                isConnectedLocally = true
             }
         }
@@ -2644,6 +2651,20 @@ class AirPodsService : Service(), SharedPreferences.OnSharedPreferenceChangeList
 
     @SuppressLint("MissingPermission", "UnspecifiedRegisterReceiverFlag")
     fun connectToSocket(
+        adapter: BluetoothAdapter, device: BluetoothDevice, manual: Boolean = false
+    ) {
+        serviceScope.launch {
+            if (!socketConnectionInProgress.compareAndSet(false, true)) return@launch
+            try {
+                connectToSocketBlocking(adapter, device, manual)
+            } finally {
+                socketConnectionInProgress.set(false)
+            }
+        }
+    }
+
+    @SuppressLint("MissingPermission", "UnspecifiedRegisterReceiverFlag")
+    private fun connectToSocketBlocking(
         adapter: BluetoothAdapter, device: BluetoothDevice, manual: Boolean = false
     ) {
         if (BluetoothConnectionManager.aacpSocket != null && BluetoothConnectionManager.aacpSocket?.isConnected == true) return
@@ -3211,10 +3232,13 @@ class AirPodsService : Service(), SharedPreferences.OnSharedPreferenceChangeList
             it.address == macAddress
         }
         if (device != null) {
-            CoroutineScope(Dispatchers.IO).launch {
+            serviceScope.launch {
                 Log.d(TAG, "connecting to $macAddress")
-                connectToSocket(bluetoothAdapter, device!!, manual = true)
-                connectAudio(this@AirPodsService, device!!)
+                val targetDevice = device!!
+                connectToSocketBlocking(bluetoothAdapter, targetDevice, manual = true)
+                if (BluetoothConnectionManager.aacpSocket?.isConnected == true) {
+                    connectAudio(this@AirPodsService, targetDevice)
+                }
             }
         }
     }
