@@ -20,4 +20,14 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 
+# Retain the Xposed entry point named by META-INF/xposed/java_init.list.
 -keep class in.org.gotit.nimblepods.utils.KotlinModule { *; }
+
+# Native JNI symbol uses this exact class and method name.
+-keep class in.org.gotit.nimblepods.utils.NativeBridge { *; }
+
+# Battery is the app's Parcelable model; keep its CREATOR and parceling members.
+-keep class in.org.gotit.nimblepods.data.Battery implements android.os.Parcelable { *; }
+
+# Preserve annotations and signatures consumed by Kotlin/Xposed reflection.
+-keepattributes RuntimeVisibleAnnotations,RuntimeInvisibleAnnotations,AnnotationDefault,Signature,InnerClasses,EnclosingMethod
