@@ -71,13 +71,13 @@ jobs:
 
       - name: Validate release signing secrets
         env:
-          RELEASE_KEYSTORE_B64: ${{ secrets.RELEASE_KEYSTORE_FILE }}
+          RELEASE_KEYSTORE_FILE: ${{ secrets.RELEASE_KEYSTORE_FILE }}
           RELEASE_STORE_PASSWORD: ${{ secrets.RELEASE_STORE_PASSWORD }}
           RELEASE_KEY_ALIAS: ${{ secrets.RELEASE_KEY_ALIAS }}
           RELEASE_KEY_PASSWORD: ${{ secrets.RELEASE_KEY_PASSWORD }}
         run: |
           missing=()
-          for name in RELEASE_KEYSTORE_B64 RELEASE_STORE_PASSWORD RELEASE_KEY_ALIAS RELEASE_KEY_PASSWORD; do
+          for name in RELEASE_KEYSTORE_FILE RELEASE_STORE_PASSWORD RELEASE_KEY_ALIAS RELEASE_KEY_PASSWORD; do
             if [[ -z "${!name}" ]]; then
               missing+=("$name")
             fi
@@ -89,11 +89,11 @@ jobs:
 
       - name: Decode and verify upload keystore
         env:
-          RELEASE_KEYSTORE_B64: ${{ secrets.RELEASE_KEYSTORE_FILE }}
+          RELEASE_KEYSTORE_FILE: ${{ secrets.RELEASE_KEYSTORE_FILE }}
           RELEASE_STORE_PASSWORD: ${{ secrets.RELEASE_STORE_PASSWORD }}
           RELEASE_KEY_ALIAS: ${{ secrets.RELEASE_KEY_ALIAS }}
         run: |
-          printf '%s' "$RELEASE_KEYSTORE_B64" | base64 --decode > android/release.keystore
+          printf '%s' "$RELEASE_KEYSTORE_FILE" | base64 --decode > android/release.keystore
           test -s android/release.keystore
           keytool -list -keystore android/release.keystore \
             -storepass "$RELEASE_STORE_PASSWORD" -alias "$RELEASE_KEY_ALIAS" >/dev/null
