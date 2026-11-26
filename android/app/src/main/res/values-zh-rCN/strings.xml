@@ -232,8 +232,6 @@
     <string name="feature_availability_disclaimer">功能是否可用取决于你的 AirPods 型号和固件版本。</string>
     <string name="contact">联系方式</string>
     <string name="email">电子邮件</string>
-    <string name="discord">Discord</string>
-    <string name="github_issues">GitHub Issues</string>
     <string name="version_code">版本号</string>
     <string name="build_type">构建类型</string>
     <string name="no">否</string>

@@ -231,8 +231,6 @@
     <string name="feature_availability_disclaimer">利用できる機能は、お使いのAirPodsのモデルおよびファームウェアのバージョンによって異なります。</string>
     <string name="contact">お問い合わせ</string>
     <string name="email">メール</string>
-    <string name="discord">Discord</string>
-    <string name="github_issues">GitHub Issues</string>
     <string name="version_code">バージョンコード</string>
     <string name="flavor" translatable="false">Flavor</string>
     <string name="build_type">ビルドタイプ</string>

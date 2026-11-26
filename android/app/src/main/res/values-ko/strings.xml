@@ -230,8 +230,6 @@
     <string name="feature_availability_disclaimer">사용 가능한 기능은 AirPods 모델과 펌웨어 버전에 따라 다릅니다.</string>
     <string name="contact">문의</string>
     <string name="email">이메일</string>
-    <string name="discord">Discord</string>
-    <string name="github_issues">GitHub 이슈</string>
     <string name="version_code">버전 코드</string>
     <string name="build_type">빌드 유형</string>
     <string name="no">아니요</string>
